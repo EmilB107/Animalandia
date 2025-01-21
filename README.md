@@ -42,6 +42,8 @@ Option 3 - Vistual Studio
 ===========================================================================
 
 File Heirarchy nung sa Visual Studio (Solution Explover/View)
+```
+Solution 'Animalandia' (1 of 1 project)
 └── Animalandia
     ├── Connected Services
     ├── Properties
@@ -87,26 +89,36 @@ File Heirarchy nung sa Visual Studio (Solution Explover/View)
     ├── Global.asax
     ├── packages.config
     └── Web.config
+```
 
 Some Deets:
+```
     ├── App_Start
     │   ├── BundleConfig.cs
+```
 - dito mag include ng like specific files na need sa project. 
 gumagamit siya bootstrap so include na yung iba na nasa content folder + yung Site.css. 
 If trip niyo mag-add additional css file, dito ilalagay. Tho, i suggest not kase pwede nmn na don sa Site.css.
 
+```
     ├── Content
+```
 - stuffs like images, fonts, and css (both bootstrap framework and Site.css for customized styles) ay dito nakalagay.
 
+```
     ├── Scripts
+```
 - as the name implies, scripts laman niya. wala ako masyado ginalaw, d nmn ako marunong mag js. pero kung bet niyo, pwede kayo mag-add.
 just make sure na i-add niyo don sa BundleConfig.cs, under boostrap bundle, para masmadali ma-manage.
 
+```
     ├── Controllers
     │   ├── GalleryController.cs
     │   └── HomeController.cs
+```
 - dito mag-configure nung sa file paths. madali lang siya since yung project framework na mismo nagha-handle.
 
+```
     ├── Views
     │   ├── Animals
     │   │   ├── AquaticAnimals.cshtml
@@ -115,18 +127,23 @@ just make sure na i-add niyo don sa BundleConfig.cs, under boostrap bundle, para
     │   │   ├── Insects.cshtml
     │   │   ├── Pets.cshtml
     │   │   └── WildAnimals.cshtml
+```
 - yung sa laman ng gallery, individual animal categories. gamit netong layout is _AnimalsLayout.cshtml
-  
+
+```
     │   ├── Home
     │   │   ├── AboutUs.cshtml
     │   │   ├── FarmAnimals.cshtml
     │   │   ├── Gallery.cshtml
     │   │   └── Index.cshtml
+```
 - name, ayon. gamit niyang layout is _Layout.cshtml.
-  
+
+```
     │   ├── Shared
     │   │   ├── _AnimalsLayout.cshtml
     │   │   ├── _Layout.cshtml
+```
 - to naman yung parang sa layout templating. dito din mina-manage yung styles, scripts, etc. na gagamitin nung pages na gumagamit sa certain layouts. 
 
 
