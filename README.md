@@ -39,7 +39,7 @@ Option 3 - Vistual Studio
 2. Copy lng laman nung nasa downloaded repo - Animalandia > Animalandia (or name nung Solution na nilagay sa settings) folder and paste sa created project
 3. goods na yan if goods steps
 
-===================================================================================
+===========================================================================
 
 File Heirarchy nung sa Visual Studio (Solution Explover/View)
 └── Animalandia
@@ -52,11 +52,19 @@ File Heirarchy nung sa Visual Studio (Solution Explover/View)
     │   ├── FilterConfig.cs
     │   └── RouteConfig.cs
     ├── Content
+    │   ├── css/
+    │   │   └── styles.css
+    │   ├── images/
+    │   │   └── logo.png
+    │   └── fonts/
     ├── Controllers
     │   ├── GalleryController.cs
     │   └── HomeController.cs
     ├── Models
+    │   ├── AnimalModel.cs
+    │   └── GalleryModel.cs
     ├── Scripts
+    │   └── main.js
     ├── Views
     │   ├── Animals
     │   │   ├── AquaticAnimals.cshtml
