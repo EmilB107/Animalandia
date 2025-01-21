@@ -9,7 +9,8 @@ Download Visual Studio~
 2. Run the Installer
 3. Select Visual Studio Community 2022
 4. Check "ASP.NET and web development"
-5. Look at the installation details and check ".Net Framework project and item templates"
+5. Look at the installation details and check ".Net Framework project and item templates".
+6. Install
 
 Visual Studio~
 Depende sa trip niyo, options are:
