@@ -43,7 +43,6 @@ Option 3 - Vistual Studio
 
 File Heirarchy nung sa Visual Studio (Solution Explover/View)
 ```
-Solution 'Animalandia' (1 of 1 project)
 └── Animalandia
     ├── Connected Services
     ├── Properties
