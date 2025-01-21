@@ -146,8 +146,10 @@ Some Deets:
 ```
 - to naman yung parang sa layout templating. dito din mina-manage yung styles, scripts, etc. na gagamitin nung pages na gumagamit sa certain layouts. 
 
-
-
+```
+    ├── favicon.ico
+```
+- icon nung website sa web, baka trip niyo palitan.
 
 
 
