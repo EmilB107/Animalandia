@@ -11,6 +11,7 @@ Download Visual Studio~
 4. Check "ASP.NET and web development"
 5. Look at the installation details and check ".Net Framework project and item templates".
 6. Install
+  
 
 Visual Studio~
 Depende sa trip niyo, options are:
@@ -24,15 +25,18 @@ Depende sa trip niyo, options are:
    e. Select MVC
    f. Create— alaws na babaguhin
    
+   
 For options 2 and 3 - download the repository as ZIP file
 1. go to repository
 2. green "Code" Button
 3. Download as ZIP File
 4. Extract san niyo trip
 
+
 Option 2 - Vistual Studio
 1. Find and Select lang "Animalandia.sln" sa downloaded repo
 2. goods na yan
+   
 
 Option 3 -
 1. Go to the created project folder
