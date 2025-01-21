@@ -96,8 +96,8 @@ Some Deets:
     │   ├── BundleConfig.cs
 ```
 - dito mag include ng like specific files na need sa project. 
-gumagamit siya bootstrap so include na yung iba na nasa content folder + yung Site.css. 
-If trip niyo mag-add additional css file, dito ilalagay. Tho, i suggest not kase pwede nmn na don sa Site.css.
+- gumagamit siya bootstrap so include na yung iba na nasa content folder + yung Site.css. 
+- If trip niyo mag-add additional css file, dito ilalagay. Tho, i suggest not kase pwede nmn na don sa Site.css.
 
 ```
     ├── Content
@@ -108,7 +108,7 @@ If trip niyo mag-add additional css file, dito ilalagay. Tho, i suggest not kase
     ├── Scripts
 ```
 - as the name implies, scripts laman niya. wala ako masyado ginalaw, d nmn ako marunong mag js. pero kung bet niyo, pwede kayo mag-add.
-just make sure na i-add niyo don sa BundleConfig.cs, under boostrap bundle, para masmadali ma-manage.
+- just make sure na i-add niyo don sa BundleConfig.cs, under boostrap bundle, para masmadali ma-manage.
 
 ```
     ├── Controllers
@@ -128,6 +128,7 @@ just make sure na i-add niyo don sa BundleConfig.cs, under boostrap bundle, para
     │   │   └── WildAnimals.cshtml
 ```
 - yung sa laman ng gallery, individual animal categories. gamit netong layout is _AnimalsLayout.cshtml
+- dito i-edit yung content nila. pero balak ko is gawan ng template din and somehow i-implement polymorphism construct or ket anong OOP principles.
 
 ```
     │   ├── Home
