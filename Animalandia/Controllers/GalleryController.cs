@@ -10,31 +10,43 @@ namespace Animalandia.Controllers
     {
         public ActionResult FarmAnimals()
         {
+            ViewBag.ActivePage = "FarmAnimals";
+            ViewBag.ActiveSection = "Gallery";
             return View();
         }
 
         public ActionResult WildAnimals()
         {
+            ViewBag.ActivePage = "WildAnimals";
+            ViewBag.ActiveSection = "Gallery";
             return View();
         }
 
         public ActionResult Pets()
         {
+            ViewBag.ActivePage = "Pets";
+            ViewBag.ActiveSection = "Gallery";
             return View();
         }
 
         public ActionResult AquaticAnimals()
         {
+            ViewBag.ActivePage = "AquaticAnimals";
+            ViewBag.ActiveSection = "Gallery";
             return View();
         }
 
         public ActionResult Birds()
         {
+            ViewBag.ActivePage = "Birds";
+            ViewBag.ActiveSection = "Gallery";
             return View();
         }
 
         public ActionResult Insects()
         {
+            ViewBag.ActivePage = "Insects";
+            ViewBag.ActiveSection = "Gallery";
             return View();
         }
     }

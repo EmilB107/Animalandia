@@ -7,7 +7,6 @@
     font-family: 'irishgrover', cursive;
 }
 
-/* Default state with border-radius */
 .animalLink {
     color: white;
     transition: background-color 0.3s, color 0.3s, border-radius 0.3s; /* Smooth transition */
@@ -15,15 +14,31 @@
     border-radius: 0 50px 50px 0; /* Top-right and bottom-right corners rounded */
 }
 
-/* Hover state */
+.animalLink.active,
 .animalLink:hover {
     background-color: white;
-    color: #335E2B;
-    text-decoration: none; /* Remove underline */
+    color: #335E2B !important;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
 }
 
+.homeLink:hover,
+.homeLink.active {
+    color: antiquewhite !important;
+}
 
+.galleryLink {
+    color: #335E2B;
+}
+
+.galleryLink:hover, 
+.galleryLink.active {
+    color: blueviolet !important;
+}
+
+.galleryBG {
+    border-radius: 20px;/* Top-right and bottom-right corners rounded */
+    background-color: #f0f0f0;
+}
 
 .customGreen {
     color: #335E2B;

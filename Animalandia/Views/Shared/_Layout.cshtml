@@ -17,9 +17,9 @@
             </button>
             <div class="collapse navbar-collapse justify-content-end">
                 <ul class="navbar-nav">
-                    <li class="nav-item me-5">@Html.ActionLink("Home", "Index", "Home", new { area = "" }, new { @class = "nav-link" })</li>
-                    <li class="nav-item me-5">@Html.ActionLink("Gallery", "Gallery", "Home", new { area = "" }, new { @class = "nav-link" })</li>
-                    <li class="nav-item me-5">@Html.ActionLink("About Us", "AboutUs", "Home", new { area = "" }, new { @class = "nav-link" })</li>
+                    <li class="nav-item me-5">@Html.ActionLink("Home", "Index", "Home", new { area = "" }, new { @class = "nav-link homeLink" + (ViewBag.ActivePage == "Home" ? " active" : "") })</li>
+                    <li class="nav-item me-5">@Html.ActionLink("Gallery", "Gallery", "Home", new { area = "" }, new { @class = "nav-link homeLink" + (ViewBag.ActivePage == "Gallery" ? " active" : "") })</li>
+                    <li class="nav-item me-5">@Html.ActionLink("About Us", "AboutUs", "Home", new { area = "" }, new { @class = "nav-link homeLink" + (ViewBag.ActivePage == "AboutUs" ? " active" : "") })</li>
                 </ul>
             </div>
         </div>
@@ -27,9 +27,9 @@
     <main class="container-xl body-content">
         @RenderBody()
     </main>
-    <footer class="container-xl">
+    @*<footer class="container-xl">
         <p>&copy; @DateTime.Now.Year - Animalandia — ASP.NET Application</p>
-    </footer>
+    </footer>*@
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")

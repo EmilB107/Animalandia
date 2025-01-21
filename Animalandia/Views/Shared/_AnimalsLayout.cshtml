@@ -8,12 +8,9 @@
     @Scripts.Render("~/bundles/modernizr")
 </head>
 <body>
-    <header>
-    </header>
-
     <div class="container-fluid">
         <div class="row">
-            <aside class="col-lg-3 navbar navbar-expand-lg overflow-auto customGreenBG" style="height: 100%;">
+            <aside class="col-lg-3 col-xxl-2 navbar navbar-expand-lg customGreenBG d-lg-flex flex-lg-column pe-5 ps-4">
                 <button class="navbar-toggler" type="button" data-bs-scroll="true" data-bs-backdrop="false" data-bs-toggle="offcanvas"
                         data-bs-target="#offcanvasLeft" aria-controls="offcanvasLeft" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -31,31 +28,31 @@
                     </div>
                     <div class="offcanvas-body justify-content-start irish">
                         <ul class="navbar-nav navbar-expand-lg flex-column">
-                            @Html.ActionLink("Animalandia", "Index", "Home", new { area = "" }, new { @class = "navbar-brand  text-white fs-2 mt-3 mb-4 d-none d-lg-block ms-5 ps-3" })
+                            @Html.ActionLink("Animalandia", "Index", "Home", new { area = "" }, new { @class = "navbar-brand  text-white fs-2 mt-3 mb-4 d-none d-lg-block ms-5" })
                             <p class="fs-6 text-white-50 ps-lg-3 mt-4 mt-lg-0">Categories</p>
                             <li class="nav-item">
-                                @Html.ActionLink("Farm Animals", "FarmAnimals", "Animals", new { @class = "nav-link animalLink my-1 ps-lg-4" })
+                                @Html.ActionLink("Farm Animals", "FarmAnimals", "Animals", new { @class = "nav-link animalLink my-1 ps-lg-4" + (ViewBag.ActivePage == "FarmAnimals" ? " active" : "") })
                             </li>
                             <li class="nav-item">
-                                @Html.ActionLink("Wild Animals", "WildAnimals", "Animals", new { @class = "nav-link animalLink my-1 ps-lg-4" })
+                                @Html.ActionLink("Wild Animals", "WildAnimals", "Animals", new { @class = "nav-link animalLink my-1 ps-lg-4" + (ViewBag.ActivePage == "WildAnimals" ? " active" : "") })
                             </li>
                             <li class="nav-item">
-                                @Html.ActionLink("Pets", "Pets", "Animals", new { @class = "nav-link animalLink my-1 ps-lg-4" })
+                                @Html.ActionLink("Pets", "Pets", "Animals", new { @class = "nav-link animalLink my-1 ps-lg-4" + (ViewBag.ActivePage == "Pets" ? " active" : "") })
                             </li>
                             <li class="nav-item">
-                                @Html.ActionLink("Aquatic Animals", "AquaticAnimals", "Animals", new { @class = "nav-link animalLink my-1 ps-lg-4" })
+                                @Html.ActionLink("Aquatic Animals", "AquaticAnimals", "Animals", new { @class = "nav-link animalLink my-1 ps-lg-4" + (ViewBag.ActivePage == "AquaticAnimals" ? " active" : "") })
                             </li>
                             <li class="nav-item">
-                                @Html.ActionLink("Birds", "Birds", "Animals", new { @class = "nav-link animalLink my-1 ps-lg-4" })
+                                @Html.ActionLink("Birds", "Birds", "Animals", new { @class = "nav-link animalLink my-1 ps-lg-4" + (ViewBag.ActivePage == "Birds" ? " active" : "") })
                             </li>
                             <li class="nav-item">
-                                @Html.ActionLink("Insects", "Insects", "Animals", new { @class = "nav-link animalLink my-1 ps-lg-4" })
+                                @Html.ActionLink("Insects", "Insects", "Animals", new { @class = "nav-link animalLink my-1 ps-lg-4" + (ViewBag.ActivePage == "Insects" ? " active" : "") })
                             </li>
                         </ul>
                     </div>
                 </div>
             </aside>
-            <main class="col-lg-9">
+            <main class="col-lg-9 col-xxl-10 d-lg-flex flex-lg-column mb-5">
                 <nav class="offcanvas-lg offcanvas-end flex-grow-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel" data-bs-scroll="true">
                     <div class="offcanvas-header">
                         <button type="button" class="btn-close btn-close-black text-reset" data-bs-dismiss="offcanvas" aria-label="Close" data-bs-target="#offcanvasRight"></button>
@@ -64,25 +61,27 @@
                     <div class="offcanvas-body justify-content-lg-end me-5">
                         <ul class="navbar-nav flex-column flex-lg-row flex-wrap my-4 customGreen">
                             <li class="nav-item col-12 col-lg-auto my-3 m-lg-0">
-                                @Html.ActionLink("Home", "../Home/Index", "Home", new { @class = "nav-link irish mx-5" })
+                                @Html.ActionLink("Home", "../Home/Index", "Home", new { @class = "nav-link galleryLink irish mx-5" })
                             </li>
                             <li class="nav-item col-12 col-lg-auto my-3 m-lg-0">
-                                @Html.ActionLink("Gallery", "../Home/Gallery", "Home", new { @class = "nav-link irish mx-5" })
+                                @Html.ActionLink("Gallery", "../Home/Gallery", "Home", new { @class = "nav-link galleryLink irish mx-5" + (ViewBag.ActiveSection == "Gallery" ? " active" : "") })
                             </li>
                             <li class="nav-item col-12 col-lg-auto my-3 m-lg-0">
-                                @Html.ActionLink("About Us", "../Home/AboutUs", "Home", new { @class = "nav-link irish mx-5" })
+                                @Html.ActionLink("About Us", "../Home/AboutUs", "Home", new { @class = "nav-link galleryLink irish mx-5" })
                             </li>
                         </ul>
                     </div>
                 </nav>
+                <h1 class="text-center customGreen irish fw-bold mb-5" style="font-size: 3rem;">@ViewBag.Title</h1>
+                @*<p>Active Page: @ViewData["ActivePage"]</p> <p>Active Section: @ViewData["ActiveSection"]</p>*@
                 @RenderBody()
             </main>
         </div>
     </div>
 
-    <footer>
+    @*<footer>
         <p>&copy; @DateTime.Now.Year - Animalandia — ASP.NET Application</p>
-    </footer>
+    </footer>*@
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
