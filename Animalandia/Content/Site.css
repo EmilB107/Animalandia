@@ -1,0 +1,77 @@
+﻿@font-face {
+    font-family: 'irishgrover';
+    src: url('irishgrover.ttf') format('truetype');
+}
+
+.irish {
+    font-family: 'irishgrover', cursive;
+}
+
+/* Default state with border-radius */
+.animalLink {
+    color: white;
+    transition: background-color 0.3s, color 0.3s, border-radius 0.3s; /* Smooth transition */
+    padding: 10px 15px;
+    border-radius: 0 50px 50px 0; /* Top-right and bottom-right corners rounded */
+}
+
+/* Hover state */
+.animalLink:hover {
+    background-color: white;
+    color: #335E2B;
+    text-decoration: none; /* Remove underline */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
+}
+
+
+
+.customGreen {
+    color: #335E2B;
+}
+
+.customGreenBG {
+    background-color: #335E2B;
+}
+
+.galleryImages {
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.exploreBtn {
+    background-color: #335E2B; /* Custom green background */
+    color: white; /* White text */
+    border: none; /* No border */
+    padding: 10px 30px; /* Padding for the button */
+    border-radius: 15px; /* Rounded corners */
+    cursor: pointer;
+    font-family: 'irishgrover', cursive;
+}
+
+.exploreBtn:hover {
+    background-color: #2B4E1F; /* Custom green background */
+    color: white; /* White text */
+}
+
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    margin-top: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}

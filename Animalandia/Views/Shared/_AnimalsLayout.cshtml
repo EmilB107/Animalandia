@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Animalandia</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <header>
+    </header>
+
+    <div class="container-fluid">
+        <div class="row">
+            <aside class="col-lg-3 navbar navbar-expand-lg overflow-auto customGreenBG" style="height: 100%;">
+                <button class="navbar-toggler" type="button" data-bs-scroll="true" data-bs-backdrop="false" data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasLeft" aria-controls="offcanvasLeft" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                @Html.ActionLink("Animalandia", "Index", "Home", new { area = "" }, new { @class = "navbar-brand  text-white fs-2 irish text-center my-3 d-lg-none" })
+                <button class="navbar-toggler" type="button" data-bs-scroll="true" data-bs-backdrop="false" data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="offcanvas-lg offcanvas-start vh-100 customGreenBG" tabindex="-1" id="offcanvasLeft" aria-labelledby="offcanvasLeftLabel">
+                    <div class="offcanvas-header px-4 pb-0">
+                        <h5 class="offcanvas-title text-white fs-4" id="offcanvasLeftLabel">Animalandia</h5>
+                        <button type="button" class="btn-close btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close" data-bs-target="#offcanvasLeft"></button>
+                    </div>
+                    <div class="offcanvas-body justify-content-start irish">
+                        <ul class="navbar-nav navbar-expand-lg flex-column">
+                            @Html.ActionLink("Animalandia", "Index", "Home", new { area = "" }, new { @class = "navbar-brand  text-white fs-2 mt-3 mb-4 d-none d-lg-block ms-5 ps-3" })
+                            <p class="fs-6 text-white-50 ps-lg-3 mt-4 mt-lg-0">Categories</p>
+                            <li class="nav-item">
+                                @Html.ActionLink("Farm Animals", "FarmAnimals", "Animals", new { @class = "nav-link animalLink my-1 ps-lg-4" })
+                            </li>
+                            <li class="nav-item">
+                                @Html.ActionLink("Wild Animals", "WildAnimals", "Animals", new { @class = "nav-link animalLink my-1 ps-lg-4" })
+                            </li>
+                            <li class="nav-item">
+                                @Html.ActionLink("Pets", "Pets", "Animals", new { @class = "nav-link animalLink my-1 ps-lg-4" })
+                            </li>
+                            <li class="nav-item">
+                                @Html.ActionLink("Aquatic Animals", "AquaticAnimals", "Animals", new { @class = "nav-link animalLink my-1 ps-lg-4" })
+                            </li>
+                            <li class="nav-item">
+                                @Html.ActionLink("Birds", "Birds", "Animals", new { @class = "nav-link animalLink my-1 ps-lg-4" })
+                            </li>
+                            <li class="nav-item">
+                                @Html.ActionLink("Insects", "Insects", "Animals", new { @class = "nav-link animalLink my-1 ps-lg-4" })
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </aside>
+            <main class="col-lg-9">
+                <nav class="offcanvas-lg offcanvas-end flex-grow-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel" data-bs-scroll="true">
+                    <div class="offcanvas-header">
+                        <button type="button" class="btn-close btn-close-black text-reset" data-bs-dismiss="offcanvas" aria-label="Close" data-bs-target="#offcanvasRight"></button>
+                        <span class="navbar-toggler-icon"></span>
+                    </div>
+                    <div class="offcanvas-body justify-content-lg-end me-5">
+                        <ul class="navbar-nav flex-column flex-lg-row flex-wrap my-4 customGreen">
+                            <li class="nav-item col-12 col-lg-auto my-3 m-lg-0">
+                                @Html.ActionLink("Home", "../Home/Index", "Home", new { @class = "nav-link irish mx-5" })
+                            </li>
+                            <li class="nav-item col-12 col-lg-auto my-3 m-lg-0">
+                                @Html.ActionLink("Gallery", "../Home/Gallery", "Home", new { @class = "nav-link irish mx-5" })
+                            </li>
+                            <li class="nav-item col-12 col-lg-auto my-3 m-lg-0">
+                                @Html.ActionLink("About Us", "../Home/AboutUs", "Home", new { @class = "nav-link irish mx-5" })
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+                @RenderBody()
+            </main>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; @DateTime.Now.Year - Animalandia — ASP.NET Application</p>
+    </footer>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

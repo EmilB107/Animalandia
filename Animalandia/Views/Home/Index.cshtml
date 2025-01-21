@@ -1,0 +1,13 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Home Page";
+}
+
+<main>
+    <section class="row justify-content-center" aria-labelledby="aspnetTitle">
+        <div class="col-6 text-center mt-4">
+            <img class="img-fluid my-3" src="~/Content/Images/header.png" alt="Header Image" />
+            @Html.ActionLink("Explore", "Gallery", "Home", new { area = "" }, new { @class = "btn exploreBtn fs-4 mt-5" })
+        </div>
+    </section>
+</main>
