@@ -1,36 +1,68 @@
-@{
+﻿@{
     Layout = "~/Views/Shared/_AnimalsLayout.cshtml";
     ViewBag.Title = "Wild Animals";
 }
 
-<section class="row mx-4 justify-content-between galleryBG py-4 px-3 my-3">
-    <div class="col-12 col-lg-5">
+<section class="row customGreen d-flex flex-row mx-4 galleryBG py-4 px-3 my-3">
+    <div class="col-12 col-lg-5 d-flex flex-column">
+        <img class="soundIcon align-self-start mb-3 ms-2" src="~/Content/Icons/volume.png" onclick="document.getElementById('lion').play();" />
+        <audio id="lion">
+            <source src="~/Content/Animal%20sounds/Wild%20Animals/Lions.mp3" type="audio/mpeg" />
+        </audio>
         <img class="rounded-4" src="~/Content/Images/placeholder2.png" />
+        <p class="text-center mt-3 fs-3 fw-semibold m-0 pb-0">Lion 🦁</p>
     </div>
-    <div class="col-12 col-lg-7 ps-5">
+    <div class="col-12 col-lg-7 d-flex align-items-center">
+        <p class="text-lg-end fs-4 w-100 px-5 mt-3 mt-lg-0">
+            Roar! I'm King Lion. I'm brave and strong, and I take care of my jungle kingdom!
+        </p>
     </div>
 </section>
 
-<section class="row mx-4 justify-content-between galleryBG py-4 px-3 my-3">
-    <div class="col-12 col-lg-7 ps-5">
+<section class="row customGreen d-flex flex-column-reverse flex-lg-row mx-4 galleryBG py-4 px-3 my-3">
+    <div class="col-12 col-lg-7 d-flex align-items-center">
+        <p class="fs-4 w-100 px-5 mt-3 mt-lg-0">
+            Hello there! I'm Ellie Elephant, and I have a long trunk for hugs and squirting water!
+        </p>
     </div>
-    <div class="col-12 col-lg-5">
+    <div class="col-12 col-lg-5 d-flex flex-column">
+        <img class="soundIcon align-self-lg-end mb-3 ms-2 ms-0 me-lg-2" src="~/Content/Icons/volume.png" onclick="document.getElementById('elephant').play();" />
+        <audio id="elephant">
+            <source src="~/Content/Animal%20sounds/Wild%20Animals/Elephant.mp3" type="audio/mpeg" />
+        </audio>
         <img class="rounded-4" src="~/Content/Images/placeholder2.png" />
+        <p class="text-center mt-3 fs-3 fw-semibold m-0 pb-0">Elephant 🐘</p>
     </div>
 </section>
 
-<section class="row mx-4 justify-content-between galleryBG py-4 px-3 my-3">
-    <div class="col-12 col-lg-5">
+<section class="row customGreen d-flex flex-row mx-4 galleryBG py-4 px-3 my-3">
+    <div class="col-12 col-lg-5 d-flex flex-column">
+        <img class="soundIcon align-self-start mb-3 ms-2" src="~/Content/Icons/volume.png" onclick="document.getElementById('giraffe').play();" />
+        <audio id="giraffe">
+            <source src="~/Content/Animal%20sounds/Wild%20Animals/Giraffe.mp3" type="audio/mpeg" />
+        </audio>
         <img class="rounded-4" src="~/Content/Images/placeholder2.png" />
+        <p class="text-center mt-3 fs-3 fw-semibold m-0 pb-0">Giraffe 🦒</p>
     </div>
-    <div class="col-12 col-lg-7 ps-5">
+    <div class="col-12 col-lg-7 d-flex align-items-center">
+        <p class="text-lg-end fs-4 w-100 px-5 mt-3 mt-lg-0">
+            Hi! I'm Gina Giraffe. My long neck helps me reach tasty leaves high in the trees!
+        </p>
     </div>
 </section>
 
-<section class="row mx-4 justify-content-between galleryBG py-4 px-3 my-3">
-    <div class="col-12 col-lg-7 ps-5">
+<section class="row customGreen d-flex flex-column-reverse flex-lg-row mx-4 galleryBG py-4 px-3 my-3">
+    <div class="col-12 col-lg-7 d-flex align-items-center">
+        <p class="fs-4 w-100 px-5 mt-3 mt-lg-0">
+            Howdy! I'm Ziggy Zebra, and my black and white stripes are super cool, don't you think?
+        </p>
     </div>
-    <div class="col-12 col-lg-5">
+    <div class="col-12 col-lg-5 d-flex flex-column">
+        <img class="soundIcon align-self-lg-end mb-3 ms-2 ms-0 me-lg-2" src="~/Content/Icons/volume.png" onclick="document.getElementById('zebra').play();" />
+        <audio id="zebra">
+            <source src="~/Content/Animal%20sounds/Wild%20Animals/Zebra.mp3" type="audio/mpeg" />
+        </audio>
         <img class="rounded-4" src="~/Content/Images/placeholder2.png" />
+        <p class="text-center mt-3 fs-3 fw-semibold m-0 pb-0">Zebra 🦓</p>
     </div>
 </section>
