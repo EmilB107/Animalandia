@@ -7,6 +7,19 @@
     font-family: 'irishgrover', cursive;
 }
 
+.soundIcon {
+    height: 1.5rem;
+    width: 1.5rem;
+    border-radius: 50%; /* Makes the icon circular */
+    cursor: pointer;
+}
+
+.soundIcon:hover {
+    box-shadow: 0 2px 0px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
+    background-color: rgba(0, 0, 0, 0.1); /* Adds a background color to highlight the circle */
+}
+
+
 .animalLink {
     color: white;
     transition: background-color 0.3s, color 0.3s, border-radius 0.3s; /* Smooth transition */
