@@ -1,36 +1,68 @@
-@{
+﻿@{
     Layout = "~/Views/Shared/_AnimalsLayout.cshtml";
     ViewBag.Title = "Birds";
 }
 
-<section class="row mx-4 justify-content-between galleryBG py-4 px-3 my-3">
-    <div class="col-12 col-lg-5">
+<section class="row customGreen d-flex flex-row mx-4 galleryBG py-4 px-3 my-3">
+    <div class="col-12 col-lg-5 d-flex flex-column">
+        <img class="soundIcon align-self-start mb-3 ms-2" src="~/Content/Icons/volume.png" onclick="document.getElementById('parrot').play();" />
+        <audio id="parrot">
+            <source src="~/Content/Animal%20sounds/Birds/parrot.mp3" type="audio/mpeg" />
+        </audio>
         <img class="rounded-4" src="~/Content/Images/placeholder2.png" />
+        <p class="text-center mt-3 fs-3 fw-semibold m-0 pb-0">Parrot 🦜</p>
     </div>
-    <div class="col-12 col-lg-7 ps-5">
+    <div class="col-12 col-lg-7 d-flex align-items-center">
+        <p class="text-lg-end fs-4 w-100 px-5 mt-3 mt-lg-0">
+            Squawk! I'm Polly Parrot, and I can talk just like you. Want to hear me say hello?
+        </p>
     </div>
 </section>
 
-<section class="row mx-4 justify-content-between galleryBG py-4 px-3 my-3">
-    <div class="col-12 col-lg-7 ps-5">
+<section class="row customGreen d-flex flex-column-reverse flex-lg-row mx-4 galleryBG py-4 px-3 my-3">
+    <div class="col-12 col-lg-7 d-flex align-items-center">
+        <p class="fs-4 w-100 px-5 mt-3 mt-lg-0">
+            Screech! I'm Eddie Eagle, and I fly high in the sky to see everything below!
+        </p>
     </div>
-    <div class="col-12 col-lg-5">
+    <div class="col-12 col-lg-5 d-flex flex-column">
+        <img class="soundIcon align-self-lg-end mb-3 ms-2 ms-0 me-lg-2" src="~/Content/Icons/volume.png" onclick="document.getElementById('penguin').play();" />
+        <audio id="eagle">
+            <source src="~/Content/Animal%20sounds/Birds/Eagle.mp3" type="audio/mpeg" />
+        </audio>
         <img class="rounded-4" src="~/Content/Images/placeholder2.png" />
+        <p class="text-center mt-3 fs-3 fw-semibold m-0 pb-0">Eagle 🦅</p>
     </div>
 </section>
 
-<section class="row mx-4 justify-content-between galleryBG py-4 px-3 my-3">
-    <div class="col-12 col-lg-5">
+<section class="row customGreen d-flex flex-row mx-4 galleryBG py-4 px-3 my-3">
+    <div class="col-12 col-lg-5 d-flex flex-column">
+        <img class="soundIcon align-self-start mb-3 ms-2" src="~/Content/Icons/volume.png" onclick="document.getElementById('owl').play();" />
+        <audio id="owl">
+            <source src="~/Content/Animal%20sounds/Birds/Owl.mp3" type="audio/mpeg" />
+        </audio>
         <img class="rounded-4" src="~/Content/Images/placeholder2.png" />
+        <p class="text-center mt-3 fs-3 fw-semibold m-0 pb-0">Owl 🦉</p>
     </div>
-    <div class="col-12 col-lg-7 ps-5">
+    <div class="col-12 col-lg-7 d-flex align-items-center">
+        <p class="text-lg-end fs-4 w-100 px-5 mt-3 mt-lg-0">
+            Hoo hoo! I'm Ollie Owl, and I'm super smart. I stay awake at night to watch the stars!
+        </p>
     </div>
 </section>
 
-<section class="row mx-4 justify-content-between galleryBG py-4 px-3 my-3">
-    <div class="col-12 col-lg-7 ps-5">
+<section class="row customGreen d-flex flex-column-reverse flex-lg-row mx-4 galleryBG py-4 px-3 my-3">
+    <div class="col-12 col-lg-7 d-flex align-items-center">
+        <p class="fs-4 w-100 px-5 mt-3 mt-lg-0">
+            Waddle waddle! I'm Penny Penguin. I love the cold and sliding on the ice with my belly!
+        </p>
     </div>
-    <div class="col-12 col-lg-5">
+    <div class="col-12 col-lg-5 d-flex flex-column">
+        <img class="soundIcon align-self-lg-end mb-3 ms-2 ms-0 me-lg-2" src="~/Content/Icons/volume.png" onclick="document.getElementById('eagle').play();" />
+        <audio id="penguin">
+            <source src="~/Content/Animal%20sounds/Birds/Penguin.mp3" type="audio/mpeg" />
+        </audio>
         <img class="rounded-4" src="~/Content/Images/placeholder2.png" />
+        <p class="text-center mt-3 fs-3 fw-semibold m-0 pb-0">Penguin 🐧</p>
     </div>
 </section>
