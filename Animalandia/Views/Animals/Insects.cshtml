@@ -1,36 +1,68 @@
-@{
+﻿@{
     Layout = "~/Views/Shared/_AnimalsLayout.cshtml";
     ViewBag.Title = "Insects";
 }
 
-<section class="row mx-4 justify-content-between galleryBG py-4 px-3 my-3">
-    <div class="col-12 col-lg-5">
+<section class="row customGreen d-flex flex-row mx-4 galleryBG py-4 px-3 my-3">
+    <div class="col-12 col-lg-5 d-flex flex-column">
+        <img class="soundIcon align-self-start mb-3 ms-2" src="~/Content/Icons/volume.png" onclick="document.getElementById('butterfly').play();" />
+        <audio id="butterfly">
+            <source src="~/Content/Animal%20sounds/Insects/Butterfly.mp3" type="audio/mpeg" />
+        </audio>
         <img class="rounded-4" src="~/Content/Images/placeholder2.png" />
+        <p class="text-center mt-3 fs-3 fw-semibold m-0 pb-0">Butterfly 🦋</p>
     </div>
-    <div class="col-12 col-lg-7 ps-5">
+    <div class="col-12 col-lg-7 d-flex align-items-center">
+        <p class="text-lg-end fs-4 w-100 px-5 mt-3 mt-lg-0">
+            Hi there! I'm Bella Butterfly. My wings are colorful, and I love fluttering in flowers!
+        </p>
     </div>
 </section>
 
-<section class="row mx-4 justify-content-between galleryBG py-4 px-3 my-3">
-    <div class="col-12 col-lg-7 ps-5">
+<section class="row customGreen d-flex flex-column-reverse flex-lg-row mx-4 galleryBG py-4 px-3 my-3">
+    <div class="col-12 col-lg-7 d-flex align-items-center">
+        <p class="fs-4 w-100 px-5 mt-3 mt-lg-0">
+            Bzz bzz! I'm Buzz Bee. I make honey and love visiting flowers for their sweet nectar!
+        </p>
     </div>
-    <div class="col-12 col-lg-5">
+    <div class="col-12 col-lg-5 d-flex flex-column">
+        <img class="soundIcon align-self-lg-end mb-3 ms-2 ms-0 me-lg-2" src="~/Content/Icons/volume.png" onclick="document.getElementById('bee').play();" />
+        <audio id="bee">
+            <source src="~/Content/Animal%20sounds/Insects/bee.mp3" type="audio/mpeg" />
+        </audio>
         <img class="rounded-4" src="~/Content/Images/placeholder2.png" />
+        <p class="text-center mt-3 fs-3 fw-semibold m-0 pb-0">Bee 🐝</p>
     </div>
 </section>
 
-<section class="row mx-4 justify-content-between galleryBG py-4 px-3 my-3">
-    <div class="col-12 col-lg-5">
+<section class="row customGreen d-flex flex-row mx-4 galleryBG py-4 px-3 my-3">
+    <div class="col-12 col-lg-5 d-flex flex-column">
+        <img class="soundIcon align-self-start mb-3 ms-2" src="~/Content/Icons/volume.png" onclick="document.getElementById('ladybug').play();" />
+        <audio id="ladybug">
+            <source src="~/Content/Animal%20sounds/Insects/ladybug.mp3" type="audio/mpeg" />
+        </audio>
         <img class="rounded-4" src="~/Content/Images/placeholder2.png" />
+        <p class="text-center mt-3 fs-3 fw-semibold m-0 pb-0">Ladybug 🐞</p>
     </div>
-    <div class="col-12 col-lg-7 ps-5">
+    <div class="col-12 col-lg-7 d-flex align-items-center">
+        <p class="text-lg-end fs-4 w-100 px-5 mt-3 mt-lg-0">
+            Hello! I'm Lucy Ladybug. My red and black spots make me look fancy, don't you think?
+        </p>
     </div>
 </section>
 
-<section class="row mx-4 justify-content-between galleryBG py-4 px-3 my-3">
-    <div class="col-12 col-lg-7 ps-5">
+<section class="row customGreen d-flex flex-column-reverse flex-lg-row mx-4 galleryBG py-4 px-3 my-3">
+    <div class="col-12 col-lg-7 d-flex align-items-center">
+        <p class="fs-4 w-100 px-5 mt-3 mt-lg-0">
+            Hi! I'm Andy Ant. I'm small but super strong, and I work hard with my ant friends!
+        </p>
     </div>
-    <div class="col-12 col-lg-5">
+    <div class="col-12 col-lg-5 d-flex flex-column">
+        <img class="soundIcon align-self-lg-end mb-3 ms-2 ms-0 me-lg-2" src="~/Content/Icons/volume.png" onclick="document.getElementById('ant').play();" />
+        <audio id="ant">
+            <source src="~/Content/Animal%20sounds/Insects/ant.mp3" type="audio/mpeg" />
+        </audio>
         <img class="rounded-4" src="~/Content/Images/placeholder2.png" />
+        <p class="text-center mt-3 fs-3 fw-semibold m-0 pb-0">Ant 🐜</p>
     </div>
 </section>
