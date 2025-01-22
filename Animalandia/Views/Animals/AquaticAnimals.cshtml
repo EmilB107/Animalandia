@@ -1,36 +1,52 @@
-@{
+﻿@{
     Layout = "~/Views/Shared/_AnimalsLayout.cshtml";
     ViewBag.Title = "Aquatic Animals";
 }
 
-<section class="row mx-4 justify-content-between galleryBG py-4 px-3 my-3">
-    <div class="col-12 col-lg-5">
+<section class="row customGreen d-flex flex-row mx-4 galleryBG py-4 px-3 my-3">
+    <div class="col-12 col-lg-5 d-flex flex-column">
+        <img class="soundIcon align-self-start mb-3 ms-2" src="~/Content/Icons/volume.png" onclick="document.getElementById('dolphin').play();" />
+        <audio id="dolphin">
+            <source src="~/Content/Animal%20sounds/Aquatic/Dolphin.mp3" type="audio/mpeg" />
+        </audio>
         <img class="rounded-4" src="~/Content/Images/placeholder2.png" />
+        <p class="text-center mt-3 fs-3 fw-semibold m-0 pb-0">Dolphin 🐬</p>
     </div>
-    <div class="col-12 col-lg-7 ps-5">
+    <div class="col-12 col-lg-7 d-flex align-items-center">
+        <p class="text-lg-end fs-4 w-100 px-5 mt-3 mt-lg-0">
+            Eee! I'm Dolly Dolphin, and I love jumping high and playing in the ocean waves!
+        </p>
     </div>
 </section>
 
-<section class="row mx-4 justify-content-between galleryBG py-4 px-3 my-3">
-    <div class="col-12 col-lg-7 ps-5">
+<section class="row customGreen d-flex flex-column-reverse flex-lg-row mx-4 galleryBG py-4 px-3 my-3">
+    <div class="col-12 col-lg-7 d-flex align-items-center">
+        <p class="fs-4 w-100 px-5 mt-3 mt-lg-0">
+            Hey there! I'm Sharky Shark. Don't worry, I'm just a big fish with a toothy grin!
+        </p>
     </div>
-    <div class="col-12 col-lg-5">
+    <div class="col-12 col-lg-5 d-flex flex-column">
+        <img class="soundIcon align-self-lg-end mb-3 ms-2 ms-0 me-lg-2" src="~/Content/Icons/volume.png" onclick="document.getElementById('shark').play();" />
+        <audio id="shark">
+            <source src="~/Content/Animal%20sounds/Aquatic/Shark%20(2).mp3" type="audio/mpeg" />
+        </audio>
         <img class="rounded-4" src="~/Content/Images/placeholder2.png" />
+        <p class="text-center mt-3 fs-3 fw-semibold m-0 pb-0">Shark 🦈</p>
     </div>
 </section>
 
-<section class="row mx-4 justify-content-between galleryBG py-4 px-3 my-3">
-    <div class="col-12 col-lg-5">
+<section class="row customGreen d-flex flex-row mx-4 galleryBG py-4 px-3 my-3">
+    <div class="col-12 col-lg-5 d-flex flex-column">
+        <img class="soundIcon align-self-start mb-3 ms-2" src="~/Content/Icons/volume.png" onclick="document.getElementById('octopus').play();" />
+        <audio id="octopus">
+            <source src="~/Content/Animal%20sounds/Aquatic/Shark%20(2).mp3" type="audio/mpeg" />
+        </audio>
         <img class="rounded-4" src="~/Content/Images/placeholder2.png" />
+        <p class="text-center mt-3 fs-3 fw-semibold m-0 pb-0">Octopus 🐙</p>
     </div>
-    <div class="col-12 col-lg-7 ps-5">
-    </div>
-</section>
-
-<section class="row mx-4 justify-content-between galleryBG py-4 px-3 my-3">
-    <div class="col-12 col-lg-7 ps-5">
-    </div>
-    <div class="col-12 col-lg-5">
-        <img class="rounded-4" src="~/Content/Images/placeholder2.png" />
+    <div class="col-12 col-lg-7 d-flex align-items-center">
+        <p class="text-lg-end fs-4 w-100 px-5 mt-3 mt-lg-0">
+            Hi! I'm Ollie Octopus, and I have eight arms for hugs and playing hide-and-seek!
+        </p>
     </div>
 </section>
