@@ -1,36 +1,68 @@
-@{
+﻿@{
     Layout = "~/Views/Shared/_AnimalsLayout.cshtml";
     ViewBag.Title = "Pets";
 }
 
-<section class="row mx-4 justify-content-between galleryBG py-4 px-3 my-3">
-    <div class="col-12 col-lg-5">
+<section class="row customGreen d-flex flex-row mx-4 galleryBG py-4 px-3 my-3">
+    <div class="col-12 col-lg-5 d-flex flex-column">
+        <img class="soundIcon align-self-start mb-3 ms-2" src="~/Content/Icons/volume.png" onclick="document.getElementById('dog').play();" />
+        <audio id="dog">
+            <source src="~/Content/Animal%20sounds/Pets/Dog.mp3" type="audio/mpeg" />
+        </audio>
         <img class="rounded-4" src="~/Content/Images/placeholder2.png" />
+        <p class="text-center mt-3 fs-3 fw-semibold m-0 pb-0">Dog 🐕</p>
     </div>
-    <div class="col-12 col-lg-7 ps-5">
+    <div class="col-12 col-lg-7 d-flex align-items-center">
+        <p class="text-lg-end fs-4 w-100 px-5 mt-3 mt-lg-0">
+            Woof woof! I'm Buddy the Dog. I love to play fetch and give big slobbery kisses!
+        </p>
     </div>
 </section>
 
-<section class="row mx-4 justify-content-between galleryBG py-4 px-3 my-3">
-    <div class="col-12 col-lg-7 ps-5">
+<section class="row customGreen d-flex flex-column-reverse flex-lg-row mx-4 galleryBG py-4 px-3 my-3">
+    <div class="col-12 col-lg-7 d-flex align-items-center">
+        <p class="fs-4 w-100 px-5 mt-3 mt-lg-0">
+            Meow! I'm Whiskers the Cat. I like to nap in sunny spots and chase little toys!
+        </p>
     </div>
-    <div class="col-12 col-lg-5">
+    <div class="col-12 col-lg-5 d-flex flex-column">
+        <img class="soundIcon align-self-lg-end mb-3 ms-2 ms-0 me-lg-2" src="~/Content/Icons/volume.png" onclick="document.getElementById('cat').play();" />
+        <audio id="cat">
+            <source src="~/Content/Animal%20sounds/Pets/Cat.mp3" type="audio/mpeg" />
+        </audio>
         <img class="rounded-4" src="~/Content/Images/placeholder2.png" />
+        <p class="text-center mt-3 fs-3 fw-semibold m-0 pb-0">Cat 🐈</p>
     </div>
 </section>
 
-<section class="row mx-4 justify-content-between galleryBG py-4 px-3 my-3">
-    <div class="col-12 col-lg-5">
+<section class="row customGreen d-flex flex-row mx-4 galleryBG py-4 px-3 my-3">
+    <div class="col-12 col-lg-5 d-flex flex-column">
+        <img class="soundIcon align-self-start mb-3 ms-2" src="~/Content/Icons/volume.png" onclick="document.getElementById('rabbit').play();" />
+        <audio id="rabbit">
+            <source src="~/Content/Animal%20sounds/Pets/Rabbit.mp3" type="audio/mpeg" />
+        </audio>
         <img class="rounded-4" src="~/Content/Images/placeholder2.png" />
+        <p class="text-center mt-3 fs-3 fw-semibold m-0 pb-0">Rabbit 🐇</p>
     </div>
-    <div class="col-12 col-lg-7 ps-5">
+    <div class="col-12 col-lg-7 d-flex align-items-center">
+        <p class="text-lg-end fs-4 w-100 px-5 mt-3 mt-lg-0">
+            Hop hop! I'm Ruby Rabbit, and I munch on carrots all day. Let's bounce together!
+        </p>
     </div>
 </section>
 
-<section class="row mx-4 justify-content-between galleryBG py-4 px-3 my-3">
-    <div class="col-12 col-lg-7 ps-5">
+<section class="row customGreen d-flex flex-column-reverse flex-lg-row mx-4 galleryBG py-4 px-3 my-3">
+    <div class="col-12 col-lg-7 d-flex align-items-center">
+        <p class="fs-4 w-100 px-5 mt-3 mt-lg-0">
+            Glub glub! I'm Finn the Fish, and I love swimming all day in my bubbly water home!
+        </p>
     </div>
-    <div class="col-12 col-lg-5">
+    <div class="col-12 col-lg-5 d-flex flex-column">
+        <img class="soundIcon align-self-lg-end mb-3 ms-2 ms-0 me-lg-2" src="~/Content/Icons/volume.png" onclick="document.getElementById('fish').play();" />
+        <audio id="fish">
+            <source src="~/Content/Animal%20sounds/Pets/fish.mp3" type="audio/mpeg" />
+        </audio>
         <img class="rounded-4" src="~/Content/Images/placeholder2.png" />
+        <p class="text-center mt-3 fs-3 fw-semibold m-0 pb-0">(goldie?) Fish 🐟</p>
     </div>
 </section>
