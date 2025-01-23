@@ -125,6 +125,13 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Animals.cs" />
+    <Compile Include="Models\AquaticAnimals.cs" />
+    <Compile Include="Models\Birds.cs" />
+    <Compile Include="Models\FarmAnimals.cs" />
+    <Compile Include="Models\Insects.cs" />
+    <Compile Include="Models\Pets.cs" />
+    <Compile Include="Models\WildAnimals.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -219,7 +226,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Content\Animal sounds\Aquatic\wala dawng sound ang sharks and octopus\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.rtl.min.css.map" />
