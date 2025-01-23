@@ -1,80 +1,57 @@
-﻿@{
+﻿@using Animalandia.Models
+@model IEnumerable<Animal>
+
+@{
     Layout = "~/Views/Shared/_AnimalsLayout.cshtml";
-    ViewBag.Title = "Wild Animals";
+    //ViewBag.Title = "Wild Animals";
 }
 
-<section class="row customGreen d-flex flex-row mx-4 galleryBG py-4 px-3 my-3">
-    <div class="col-12 col-lg-5 d-flex flex-column">
-        <img class="soundIcon align-self-start mb-3 ms-2" src="~/Content/Icons/volume.png" onclick="document.getElementById('lion').play();" />
-        <audio id="lion">
-            <source src="~/Content/Animal%20sounds/Wild%20Animals/Lions.mp3" type="audio/mpeg" />
-        </audio>
-        <img class="rounded-4" src="~/Content/Images/placeholder2.png" />
-        <p class="text-center mt-3 fs-3 fw-semibold m-0 pb-0">Lion 🦁</p>
-    </div>
-    <div class="col-12 col-lg-7 align-content-center">
-        <p class="fs-4 w-100 px-5 mt-5 mt-lg-0">
-            "Roar! I'm King Lion. I'm brave and strong, and I take care of my jungle kingdom!"
-        </p>
-        <p class="fs-4 w-100 px-5 mt-5">
-            <span class="fw-semibold">Description:</span> Lions are big cats with golden fur and loud roars. Male lions have fluffy manes.
-        </p>
-    </div>
-</section>
+@{
+    bool isEven = true;
+    int index = 0;
+}
 
-<section class="row customGreen d-flex flex-column-reverse flex-lg-row mx-4 galleryBG py-4 px-3 my-3">
-    <div class="col-12 col-lg-7 align-content-center">
-        <p class="fs-4 w-100 px-5 mt-5 mt-lg-0">
-            "Hello there! I'm Ellie Elephant, and I have a long trunk for hugs and squirting water!"
-        </p>
-        <p class="fs-4 w-100 px-5 mt-5">
-            <span class="fw-semibold">Description:</span> Elephants are huge animals with gray skin, long trunks, and big ears.
-        </p>
-    </div>
-    <div class="col-12 col-lg-5 d-flex flex-column">
-        <img class="soundIcon align-self-lg-end mb-3 ms-2 ms-0 me-lg-2" src="~/Content/Icons/volume.png" onclick="document.getElementById('elephant').play();" />
-        <audio id="elephant">
-            <source src="~/Content/Animal%20sounds/Wild%20Animals/Elephant.mp3" type="audio/mpeg" />
-        </audio>
-        <img class="rounded-4" src="~/Content/Images/placeholder2.png" />
-        <p class="text-center mt-3 fs-3 fw-semibold m-0 pb-0">Elephant 🐘</p>
-    </div>
-</section>
-
-<section class="row customGreen d-flex flex-row mx-4 galleryBG py-4 px-3 my-3">
-    <div class="col-12 col-lg-5 d-flex flex-column">
-        <img class="soundIcon align-self-start mb-3 ms-2" src="~/Content/Icons/volume.png" onclick="document.getElementById('giraffe').play();" />
-        <audio id="giraffe">
-            <source src="~/Content/Animal%20sounds/Wild%20Animals/Giraffe.mp3" type="audio/mpeg" />
-        </audio>
-        <img class="rounded-4" src="~/Content/Images/placeholder2.png" />
-        <p class="text-center mt-3 fs-3 fw-semibold m-0 pb-0">Giraffe 🦒</p>
-    </div>
-    <div class="col-12 col-lg-7 align-content-center">
-        <p class="fs-4 w-100 px-5 mt-5 mt-lg-0">
-            "Hi! I'm Gina Giraffe. My long neck helps me reach tasty leaves high in the trees!"
-        </p>
-        <p class="fs-4 w-100 px-5 mt-5">
-            <span class="fw-semibold">Description:</span> Giraffes are tall animals with long necks and brown spots. They eat leaves from tall trees.
-        </p>
-    </div>
-</section>
-
-<section class="row customGreen d-flex flex-column-reverse flex-lg-row mx-4 galleryBG py-4 px-3 my-3">
-    <div class="col-12 col-lg-7 align-content-center">
-        <p class="fs-4 w-100 px-5 mt-5 mt-lg-0">
-            "Howdy! I'm Ziggy Zebra, and my black and white stripes are super cool, don't you think?"
-        </p>
-        <p class="fs-4 w-100 px-5 mt-5">
-            <span class="fw-semibold">Description:</span> Zebras look like striped horses with black and white fur. They live in grassy areas.
-        </p>
-    </div>
-    <div class="col-12 col-lg-5 d-flex flex-column">
-        <img class="soundIcon align-self-lg-end mb-3 ms-2 ms-0 me-lg-2" src="~/Content/Icons/volume.png" onclick="document.getElementById('zebra').play();" />
-        <audio id="zebra">
-            <source src="~/Content/Animal%20sounds/Wild%20Animals/Zebra.mp3" type="audio/mpeg" />
-        </audio>
-        <img class="rounded-4" src="~/Content/Images/placeholder2.png" />
-        <p class="text-center mt-3 fs-3 fw-semibold m-0 pb-0">Zebra 🦓</p>
-    </div>
-</section>
+@foreach (var wildAnimal in Model)
+{
+    var audioId = "audio" + index;
+    if (isEven)
+    {
+        <section class="row customGreen d-flex flex-row mx-4 galleryBG py-4 px-3 my-3">
+            <div class="col-12 col-lg-5 d-flex flex-column">
+                <img class="soundIcon align-self-start mb-3 ms-2" src="~/Content/Icons/volume.png" onclick="document.getElementById('@audioId').play();" />
+                <audio id="@audioId">
+                    <source src="@Url.Content(wildAnimal.SoundFilePath)" type="audio/mpeg" />
+                </audio>
+                <img class="rounded-4" src="@Url.Content(wildAnimal.ImageFilePath)" alt="@wildAnimal.Name" />
+                <p class="text-center mt-3 fs-3 fw-semibold m-0 pb-0">@wildAnimal.Name</p>
+            </div>
+            <div class="col-12 col-lg-7 align-content-center">
+                <p class="fs-4 w-100 px-5 mt-5 mt-lg-0">@wildAnimal.Introduction()</p>
+                <p class="fs-4 w-100 px-5 mt-5">
+                    <span class="fw-bold">Description:</span> @wildAnimal.Description()
+                </p>
+            </div>
+        </section>
+    }
+    else
+    {
+        <section class="row customGreen d-flex flex-column-reverse flex-lg-row mx-4 galleryBG py-4 px-3 my-3">
+            <div class="col-12 col-lg-7 align-content-center">
+                <p class="fs-4 w-100 px-5 mt-5 mt-lg-0">@wildAnimal.Introduction()</p>
+                <p class="fs-4 w-100 px-5 mt-5">
+                    <span class="fw-bold">Description:</span> @wildAnimal.Description()
+                </p>
+            </div>
+            <div class="col-12 col-lg-5 d-flex flex-column">
+                <img class="soundIcon align-self-lg-end mb-3 ms-2 ms-0 me-lg-2" src="~/Content/Icons/volume.png" onclick="document.getElementById('@audioId').play();" />
+                <audio id="@audioId">
+                    <source src="@Url.Content(wildAnimal.SoundFilePath)" type="audio/mpeg" />
+                </audio>
+                <img class="rounded-4" src="@Url.Content(wildAnimal.ImageFilePath)" alt="@wildAnimal.Name" />
+                <p class="text-center mt-3 fs-3 fw-semibold m-0 pb-0">@wildAnimal.Name</p>
+            </div>
+        </section>
+    }
+    isEven = !isEven;
+    index++;
+}
