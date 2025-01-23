@@ -15,7 +15,7 @@
                         data-bs-target="#offcanvasLeft" aria-controls="offcanvasLeft" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                @Html.ActionLink("Animalandia", "Index", "Home", new { area = "" }, new { @class = "navbar-brand  text-white fs-2 irish text-center my-3 d-lg-none" })
+                @Html.ActionLink("Animalandia", "Index", "Home", new { area = "" }, new { @class = "navbar-brand text-white fs-2 irish text-center my-3 d-lg-none" })
                 <button class="navbar-toggler" type="button" data-bs-scroll="true" data-bs-backdrop="false" data-bs-toggle="offcanvas"
                         data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -28,7 +28,7 @@
                     </div>
                     <div class="offcanvas-body justify-content-start irish">
                         <ul class="navbar-nav navbar-expand-lg flex-column">
-                            @Html.ActionLink("Animalandia", "Index", "Home", new { area = "" }, new { @class = "navbar-brand  text-white fs-2 mt-3 mb-4 d-none d-lg-block ms-5" })
+                            @Html.ActionLink("Animalandia", "Index", "Home", new { area = "" }, new { @class = "navbar-brand text-white fs-2 mt-3 mb-4 d-none d-lg-block ms-5" })
                             <p class="fs-6 text-white-50 ps-lg-3 mt-4 mt-lg-0">Categories</p>
                             <li class="nav-item">
                                 @Html.ActionLink("Farm Animals", "FarmAnimals", "Animals", new { @class = "nav-link animalLink my-1 ps-lg-4" + (ViewBag.ActivePage == "FarmAnimals" ? " active" : "") })
@@ -73,15 +73,10 @@
                     </div>
                 </nav>
                 <h1 class="text-center customGreen irish fw-bold mb-5 mt-5 mt-lg-0" style="font-size: 3rem;">@ViewBag.Title</h1>
-                @*<p>Active Page: @ViewData["ActivePage"]</p> <p>Active Section: @ViewData["ActiveSection"]</p>*@
                 @RenderBody()
             </main>
         </div>
     </div>
-
-    @*<footer>
-        <p>&copy; @DateTime.Now.Year - Animalandia — ASP.NET Application</p>
-    </footer>*@
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
