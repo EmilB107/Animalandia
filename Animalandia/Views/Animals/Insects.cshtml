@@ -1,80 +1,58 @@
-﻿@{
+﻿@using Animalandia.Models
+@model IEnumerable<Animal>
+
+@{
     Layout = "~/Views/Shared/_AnimalsLayout.cshtml";
-    ViewBag.Title = "Insects";
 }
 
-<section class="row customGreen d-flex flex-row mx-4 galleryBG py-4 px-3 my-3">
-    <div class="col-12 col-lg-5 d-flex flex-column">
-        <img class="soundIcon align-self-start mb-3 ms-2" src="~/Content/Icons/volume.png" onclick="document.getElementById('butterfly').play();" />
-        <audio id="butterfly">
-            <source src="~/Content/Animal%20sounds/Insects/Butterfly.mp3" type="audio/mpeg" />
-        </audio>
-        <img class="rounded-4" src="~/Content/Images/placeholder2.png" />
-        <p class="text-center mt-3 fs-3 fw-semibold m-0 pb-0">Butterfly 🦋</p>
-    </div>
-    <div class="col-12 col-lg-7 align-content-center">
-        <p class="fs-4 w-100 px-5 mt-5 mt-lg-0">
-            "Hi there! I'm Bella Butterfly. My wings are colorful, and I love fluttering in flowers!"
-        </p>
-        <p class="fs-4 w-100 px-5 mt-5">
-            <span class="fw-semibold">Description:</span> Butterflies are small insects with colorful wings. They flutter from flower to flower.
-        </p>
-    </div>
-</section>
+@{
+    bool isEven = true;
+    int index = 0;
+}
 
-<section class="row customGreen d-flex flex-column-reverse flex-lg-row mx-4 galleryBG py-4 px-3 my-3">
-    <div class="col-12 col-lg-7 align-content-center">
-        <p class="fs-4 w-100 px-5 mt-5 mt-lg-0">
-            "Bzz bzz! I'm Buzz Bee. I make honey and love visiting flowers for their sweet nectar!"
-        </p>
-        <p class="fs-4 w-100 px-5 mt-5">
-            <span class="fw-semibold">Description:</span> Bees are yellow and black insects that make honey and buzz around flowers.
-        </p>
-    </div>
-    <div class="col-12 col-lg-5 d-flex flex-column">
-        <img class="soundIcon align-self-lg-end mb-3 ms-2 ms-0 me-lg-2" src="~/Content/Icons/volume.png" onclick="document.getElementById('bee').play();" />
-        <audio id="bee">
-            <source src="~/Content/Animal%20sounds/Insects/bee.mp3" type="audio/mpeg" />
-        </audio>
-        <img class="rounded-4" src="~/Content/Images/placeholder2.png" />
-        <p class="text-center mt-3 fs-3 fw-semibold m-0 pb-0">Bee 🐝</p>
-    </div>
-</section>
+@foreach (var insect in Model)
+{
+    var audioId = "audio" + index;
+    if (isEven)
+    {
+        <section class="row customGreen d-flex flex-row mx-4 galleryBG py-4 px-3 my-3">
+            <div class="col-12 col-lg-5 d-flex flex-column">
+                <img class="soundIcon align-self-start mb-3 ms-2" src="~/Content/Icons/volume.png" onclick="document.getElementById('@audioId').play();" />
+                <audio id="@audioId">
+                    <source src="@Url.Content(insect.SoundFilePath)" type="audio/mpeg" />
+                </audio>
+                <img class="rounded-4" src="@Url.Content(insect.ImageFilePath)" alt="@insect.Name" />
+                <p class="text-center mt-3 fs-3 fw-semibold m-0 pb-0">@insect.Name</p>
+            </div>
+            <div class="col-12 col-lg-7 align-content-center">
+                <p class="fs-4 w-100 px-5 mt-5 mt-lg-0">@insect.Introduction()</p>
+                <p class="fs-4 w-100 px-5 mt-5">
+                    <span class="fw-bold">Description:</span> @insect.Description()
+                </p>
+            </div>
+        </section>
+    }
+    else
+    {
+        <section class="row customGreen d-flex flex-column-reverse flex-lg-row mx-4 galleryBG py-4 px-3 my-3">
+            <div class="col-12 col-lg-7 align-content-center">
+                <p class="fs-4 w-100 px-5 mt-5 mt-lg-0">@insect.Introduction()</p>
+                <p class="fs-4 w-100 px-5 mt-5">
+                    <span class="fw-bold">Description:</span> @insect.Description()
+                </p>
+            </div>
+            <div class="col-12 col-lg-5 d-flex flex-column">
+                <img class="soundIcon align-self-lg-end mb-3 ms-2 ms-0 me-lg-2" src="~/Content/Icons/volume.png" onclick="document.getElementById('@audioId').play();" />
+                <audio id="@audioId">
+                    <source src="@Url.Content(insect.SoundFilePath)" type="audio/mpeg" />
+                </audio>
+                <img class="rounded-4" src="@Url.Content(insect.ImageFilePath)" alt="@insect.Name" />
+                <p class="text-center mt-3 fs-3 fw-semibold m-0 pb-0">@insect.Name</p>
+            </div>
+        </section>
+    }
+    isEven = !isEven;
+    index++;
+}
 
-<section class="row customGreen d-flex flex-row mx-4 galleryBG py-4 px-3 my-3">
-    <div class="col-12 col-lg-5 d-flex flex-column">
-        <img class="soundIcon align-self-start mb-3 ms-2" src="~/Content/Icons/volume.png" onclick="document.getElementById('ladybug').play();" />
-        <audio id="ladybug">
-            <source src="~/Content/Animal%20sounds/Insects/ladybug.mp3" type="audio/mpeg" />
-        </audio>
-        <img class="rounded-4" src="~/Content/Images/placeholder2.png" />
-        <p class="text-center mt-3 fs-3 fw-semibold m-0 pb-0">Ladybug 🐞</p>
-    </div>
-    <div class="col-12 col-lg-7 align-content-center">
-        <p class="fs-4 w-100 px-5 mt-5 mt-lg-0">
-            "Hello! I'm Lucy Ladybug. My red and black spots make me look fancy, don't you think?"
-        </p>
-        <p class="fs-4 w-100 px-5 mt-5">
-            <span class="fw-semibold">Description:</span> Ladybugs are tiny red insects with black spots. They're fun to spot in gardens!
-        </p>
-    </div>
-</section>
 
-<section class="row customGreen d-flex flex-column-reverse flex-lg-row mx-4 galleryBG py-4 px-3 my-3">
-    <div class="col-12 col-lg-7 align-content-center">
-        <p class="fs-4 w-100 px-5 mt-5 mt-lg-0">
-            "Hi! I'm Andy Ant. I'm small but super strong, and I work hard with my ant friends!"
-        </p>
-        <p class="fs-4 w-100 px-5 mt-5">
-            <span class="fw-semibold">Description:</span> Ants are small and hardworking insects that work together to build big nests.
-        </p>
-    </div>
-    <div class="col-12 col-lg-5 d-flex flex-column">
-        <img class="soundIcon align-self-lg-end mb-3 ms-2 ms-0 me-lg-2" src="~/Content/Icons/volume.png" onclick="document.getElementById('ant').play();" />
-        <audio id="ant">
-            <source src="~/Content/Animal%20sounds/Insects/ant.mp3" type="audio/mpeg" />
-        </audio>
-        <img class="rounded-4" src="~/Content/Images/placeholder2.png" />
-        <p class="text-center mt-3 fs-3 fw-semibold m-0 pb-0">Ant 🐜</p>
-    </div>
-</section>
