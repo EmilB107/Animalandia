@@ -1,80 +1,56 @@
-﻿@{
+﻿@using Animalandia.Models
+@model IEnumerable<Animal>
+
+@{
     Layout = "~/Views/Shared/_AnimalsLayout.cshtml";
-    ViewBag.Title = "Birds";
 }
 
-<section class="row customGreen d-flex flex-row mx-4 galleryBG py-4 px-3 my-3">
-    <div class="col-12 col-lg-5 d-flex flex-column">
-        <img class="soundIcon align-self-start mb-3 ms-2" src="~/Content/Icons/volume.png" onclick="document.getElementById('parrot').play();" />
-        <audio id="parrot">
-            <source src="~/Content/Animal%20sounds/Birds/parrot.mp3" type="audio/mpeg" />
-        </audio>
-        <img class="rounded-4" src="~/Content/Images/placeholder2.png" />
-        <p class="text-center mt-3 fs-3 fw-semibold m-0 pb-0">Parrot 🦜</p>
-    </div>
-    <div class="col-12 col-lg-7 align-content-center">
-        <p class="fs-4 w-100 px-5 mt-5 mt-lg-0">
-            "Squawk! I'm Polly Parrot, and I can talk just like you. Want to hear me say hello?"
-        </p>
-        <p class="fs-4 w-100 px-5 mt-5">
-            <span class="fw-semibold">Description:</span> Parrots are colorful birds that can talk! They often have green, red, or blue feathers.
-        </p>
-    </div>
-</section>
+@{
+    bool isEven = true;
+    int index = 0;
+}
 
-<section class="row customGreen d-flex flex-column-reverse flex-lg-row mx-4 galleryBG py-4 px-3 my-3">
-    <div class="col-12 col-lg-7 align-content-center">
-        <p class="fs-4 w-100 px-5 mt-5 mt-lg-0">
-            "Screech! I'm Eddie Eagle, and I fly high in the sky to see everything below!"
-        </p>
-        <p class="fs-4 w-100 px-5 mt-5">
-            <span class="fw-semibold">Description:</span> Eagles are large, powerful birds with brown and white feathers. They fly very high.
-        </p>
-    </div>
-    <div class="col-12 col-lg-5 d-flex flex-column">
-        <img class="soundIcon align-self-lg-end mb-3 ms-2 ms-0 me-lg-2" src="~/Content/Icons/volume.png" onclick="document.getElementById('eagle').play();" />
-        <audio id="eagle">
-            <source src="~/Content/Animal%20sounds/Birds/Eagle.mp3" type="audio/mpeg" />
-        </audio>
-        <img class="rounded-4" src="~/Content/Images/placeholder2.png" />
-        <p class="text-center mt-3 fs-3 fw-semibold m-0 pb-0">Eagle 🦅</p>
-    </div>
-</section>
-
-<section class="row customGreen d-flex flex-row mx-4 galleryBG py-4 px-3 my-3">
-    <div class="col-12 col-lg-5 d-flex flex-column">
-        <img class="soundIcon align-self-start mb-3 ms-2" src="~/Content/Icons/volume.png" onclick="document.getElementById('owl').play();" />
-        <audio id="owl">
-            <source src="~/Content/Animal%20sounds/Birds/Owl.mp3" type="audio/mpeg" />
-        </audio>
-        <img class="rounded-4" src="~/Content/Images/placeholder2.png" />
-        <p class="text-center mt-3 fs-3 fw-semibold m-0 pb-0">Owl 🦉</p>
-    </div>
-    <div class="col-12 col-lg-7 align-content-center">
-        <p class="fs-4 w-100 px-5 mt-5 mt-lg-0">
-            "Hoo hoo! I'm Ollie Owl, and I'm super smart. I stay awake at night to watch the stars!"
-        </p>
-        <p class="fs-4 w-100 px-5 mt-5">
-            <span class="fw-semibold">Description:</span> Owls are nighttime birds with big eyes and soft feathers. They hoot "whoo-whoo!"
-        </p>
-    </div>
-</section>
-
-<section class="row customGreen d-flex flex-column-reverse flex-lg-row mx-4 galleryBG py-4 px-3 my-3">
-    <div class="col-12 col-lg-7 align-content-center">
-        <p class="fs-4 w-100 px-5 mt-5 mt-lg-0">
-            "Waddle waddle! I'm Penny Penguin. I love the cold and sliding on the ice with my belly!"
-        </p>
-        <p class="fs-4 w-100 px-5 mt-5">
-            <span class="fw-semibold">Description:</span> Penguins are black and white birds that waddle and swim. They live in cold places.
-        </p>
-    </div>
-    <div class="col-12 col-lg-5 d-flex flex-column">
-        <img class="soundIcon align-self-lg-end mb-3 ms-2 ms-0 me-lg-2" src="~/Content/Icons/volume.png" onclick="document.getElementById('penguin').play();" />
-        <audio id="penguin">
-            <source src="~/Content/Animal%20sounds/Birds/Penguin.mp3" type="audio/mpeg" />
-        </audio>
-        <img class="rounded-4" src="~/Content/Images/placeholder2.png" />
-        <p class="text-center mt-3 fs-3 fw-semibold m-0 pb-0">Penguin 🐧</p>
-    </div>
-</section>
+@foreach (var bird in Model)
+{
+    var audioId = "audio" + index;
+    if (isEven)
+    {
+        <section class="row customGreen d-flex flex-row mx-4 galleryBG py-4 px-3 my-3">
+            <div class="col-12 col-lg-5 d-flex flex-column">
+                <img class="soundIcon align-self-start mb-3 ms-2" src="~/Content/Icons/volume.png" onclick="document.getElementById('@audioId').play();" />
+                <audio id="@audioId">
+                    <source src="@Url.Content(bird.SoundFilePath)" type="audio/mpeg" />
+                </audio>
+                <img class="rounded-4" src="@Url.Content(bird.ImageFilePath)" alt="@bird.Name" />
+                <p class="text-center mt-3 fs-3 fw-semibold m-0 pb-0">@bird.Name</p>
+            </div>
+            <div class="col-12 col-lg-7 align-content-center">
+                <p class="fs-4 w-100 px-5 mt-5 mt-lg-0">@bird.Introduction()</p>
+                <p class="fs-4 w-100 px-5 mt-5">
+                    <span class="fw-bold">Description:</span> @bird.Description()
+                </p>
+            </div>
+        </section>
+    }
+    else
+    {
+        <section class="row customGreen d-flex flex-column-reverse flex-lg-row mx-4 galleryBG py-4 px-3 my-3">
+            <div class="col-12 col-lg-7 align-content-center">
+                <p class="fs-4 w-100 px-5 mt-5 mt-lg-0">@bird.Introduction()</p>
+                <p class="fs-4 w-100 px-5 mt-5">
+                    <span class="fw-bold">Description:</span> @bird.Description()
+                </p>
+            </div>
+            <div class="col-12 col-lg-5 d-flex flex-column">
+                <img class="soundIcon align-self-lg-end mb-3 ms-2 ms-0 me-lg-2" src="~/Content/Icons/volume.png" onclick="document.getElementById('@audioId').play();" />
+                <audio id="@audioId">
+                    <source src="@Url.Content(bird.SoundFilePath)" type="audio/mpeg" />
+                </audio>
+                <img class="rounded-4" src="@Url.Content(bird.ImageFilePath)" alt="@bird.Name" />
+                <p class="text-center mt-3 fs-3 fw-semibold m-0 pb-0">@bird.Name</p>
+            </div>
+        </section>
+    }
+    isEven = !isEven;
+    index++;
+}
