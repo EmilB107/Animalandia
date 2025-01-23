@@ -1,80 +1,56 @@
-﻿@{
+﻿@using Animalandia.Models
+@model IEnumerable<Animal>
+
+@{
     Layout = "~/Views/Shared/_AnimalsLayout.cshtml";
-    ViewBag.Title = "Farm Animals";
 }
 
-<section class="row customGreen d-flex flex-row mx-4 galleryBG py-4 px-3 my-3">
-    <div class="col-12 col-lg-5 d-flex flex-column">
-        <img class="soundIcon align-self-start mb-3 ms-2" src="~/Content/Icons/volume.png" onclick="document.getElementById('cow').play();" />
-        <audio id="cow">
-            <source src="~/Content/Animal%20sounds/Farm%20Animals/Cows.mp3" type="audio/mpeg" />
-        </audio>
-        <img class="rounded-4" src="~/Content/Images/placeholder2.png" />
-        <p class="text-center mt-3 fs-3 fw-semibold m-0 pb-0">Cow 🐄</p>
-    </div>
-    <div class="col-12 col-lg-7 align-content-center">
-        <p class="fs-4 w-100 px-5 mt-5 mt-lg-0">
-            "Moo! I'm Mrs. Cow, and I make yummy milk for everyone. I love munching on green grass!"
-        </p>
-        <p class="fs-4 w-100 px-5 mt-5">
-            <span class="fw-semibold">Description:</span> Cows are big animals with smooth, brown, black, or white fur. They give us milk and go "moo!"
-        </p>
-    </div>
-</section>
+@{
+    bool isEven = true;
+    int index = 0;
+}
 
-<section class="row customGreen d-flex flex-column-reverse flex-lg-row mx-4 galleryBG py-4 px-3 my-3">
-    <div class="col-12 col-lg-7 align-content-center">
-        <p class="fs-4 w-100 px-5 mt-5 mt-lg-0">
-            "Oink oink! I'm Piggy, and I adore rolling in the mud—it keeps me cool and happy!"
-        </p>
-        <p class="fs-4 w-100 px-5 mt-5">
-            <span class="fw-semibold">Description:</span> Pigs are pink or brown animals with flat noses and curly tails. They love to roll in mud!
-        </p>
-    </div>
-    <div class="col-12 col-lg-5 d-flex flex-column">
-        <img class="soundIcon align-self-lg-end mb-3 ms-2 ms-0 me-lg-2" src="~/Content/Icons/volume.png" onclick="document.getElementById('pig').play();" />
-        <audio id="pig">
-            <source src="~/Content/Animal%20sounds/Farm%20Animals/Pigs.mp3" type="audio/mpeg" />
-        </audio>
-        <img class="rounded-4" src="~/Content/Images/placeholder2.png" />
-        <p class="text-center mt-3 fs-3 fw-semibold m-0 pb-0">Pig 🐖</p>
-    </div>
-</section>
-
-<section class="row customGreen d-flex flex-row mx-4 galleryBG py-4 px-3 my-3">
-    <div class="col-12 col-lg-5 d-flex flex-column">
-        <img class="soundIcon align-self-start mb-3 ms-2" src="~/Content/Icons/volume.png" onclick="document.getElementById('chicken').play();" />
-        <audio id="chicken">
-            <source src="~/Content/Animal%20sounds/Farm%20Animals/Chicken.mp3" type="audio/mpeg" />
-        </audio>
-        <img class="rounded-4" src="~/Content/Images/placeholder2.png" />
-        <p class="text-center mt-3 fs-3 fw-semibold m-0 pb-0">Chicken 🐔</p>
-    </div>
-    <div class="col-12 col-lg-7 align-content-center">
-        <p class="fs-4 w-100 px-5 mt-5 mt-lg-0">
-            "Cluck cluck! I'm Chicky, and I lay eggs every day. Do you want to see my nest?"
-        </p>
-        <p class="fs-4 w-100 px-5 mt-5">
-            <span class="fw-semibold">Description:</span> Chickens are small birds with feathers that can be white, brown, or black. They lay eggs!
-        </p>
-    </div>
-</section>
-
-<section class="row customGreen d-flex flex-column-reverse flex-lg-row mx-4 galleryBG py-4 px-3 my-3">
-    <div class="col-12 col-lg-7 align-content-center">
-        <p class="fs-4 w-100 px-5 mt-5 mt-lg-0">
-            "Baa! I'm Woolly Sheep. My fluffy coat keeps me warm and gives you cozy sweaters!"
-        </p>
-        <p class="fs-4 w-100 px-5 mt-5">
-            <span class="fw-semibold">Description:</span> Sheep have fluffy white or gray wool and say "baa." Their wool is used to make clothes.
-        </p>
-    </div>
-    <div class="col-12 col-lg-5 d-flex flex-column">
-        <img class="soundIcon align-self-lg-end mb-3 ms-2 ms-0 me-lg-2" src="~/Content/Icons/volume.png" onclick="document.getElementById('sheep').play();" />
-        <audio id="sheep">
-            <source src="~/Content/Animal%20sounds/Farm%20Animals/Sheeps.mp3" type="audio/mpeg" />
-        </audio>
-        <img class="rounded-4" src="~/Content/Images/placeholder2.png" />
-        <p class="text-center mt-3 fs-3 fw-semibold m-0 pb-0">Sheep 🐑</p>
-    </div>
-</section>
+@foreach (var animal in Model)
+{
+    var audioId = "audio" + index;
+    if (isEven)
+    {
+        <section class="row customGreen d-flex flex-row mx-4 galleryBG py-4 px-3 my-3">
+            <div class="col-12 col-lg-5 d-flex flex-column">
+                <img class="soundIcon align-self-start mb-3 ms-2" src="~/Content/Icons/volume.png" onclick="document.getElementById('@audioId').play();" />
+                <audio id="@audioId">
+                    <source src="@Url.Content(animal.SoundFilePath)" type="audio/mpeg" />
+                </audio>
+                <img class="rounded-4" src="@Url.Content(animal.ImageFilePath)" alt="@animal.Name" />
+                <p class="text-center mt-3 fs-3 fw-semibold m-0 pb-0">@animal.Name</p>
+            </div>
+            <div class="col-12 col-lg-7 align-content-center">
+                <p class="fs-4 w-100 px-5 mt-5 mt-lg-0">@animal.Introduction()</p>
+                <p class="fs-4 w-100 px-5 mt-5">
+                    <span class="fw-bold">Description:</span> @animal.Description()
+                </p>
+            </div>
+        </section>
+    }
+    else
+    {
+        <section class="row customGreen d-flex flex-column-reverse flex-lg-row mx-4 galleryBG py-4 px-3 my-3">
+            <div class="col-12 col-lg-7 align-content-center">
+                <p class="fs-4 w-100 px-5 mt-5 mt-lg-0">@animal.Introduction()</p>
+                <p class="fs-4 w-100 px-5 mt-5">
+                    <span class="fw-bold">Description:</span> @animal.Description()
+                </p>
+            </div>
+            <div class="col-12 col-lg-5 d-flex flex-column">
+                <img class="soundIcon align-self-lg-end mb-3 ms-2 ms-0 me-lg-2" src="~/Content/Icons/volume.png" onclick="document.getElementById('@audioId').play();" />
+                <audio id="@audioId">
+                    <source src="@Url.Content(animal.SoundFilePath)" type="audio/mpeg" />
+                </audio>
+                <img class="rounded-4" src="@Url.Content(animal.ImageFilePath)" alt="@animal.Name" />
+                <p class="text-center mt-3 fs-3 fw-semibold m-0 pb-0">@animal.Name</p>
+            </div>
+        </section>
+    }
+    isEven = !isEven;
+    index++;
+}
