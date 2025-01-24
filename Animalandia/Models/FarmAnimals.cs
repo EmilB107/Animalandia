@@ -34,7 +34,10 @@ namespace Animalandia.Models
 
         public override string Description()
         {
-            return "Cows are big animals with smooth, brown, black, or white fur. They give us milk and go 'moo!'";
+            return "Cows are large farm animals known for their gentle nature. They are often found in shades of black, white, brown, or a mix of these colors. " +
+                "Cows have a strong, sturdy body, a big nose, and a long tail with a tuft of hair at the end. " +
+                "They love to graze on grass and are known for producing milk, which is used to make cheese, butter, and yogurt. " +
+                "Cows are social animals and often stay in herds. You can hear them saying \"moo\" in the fields.";
         }
     }
 

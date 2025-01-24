@@ -1,0 +1,57 @@
+﻿@using Animalandia.Models
+@model IEnumerable<Animal>
+
+@{
+    Layout = "~/Views/Shared/_AnimalsLayout.cshtml";
+}
+
+@{
+    bool isEven = true;
+    int index = 0;
+}
+
+@foreach (var aquaticAnimal in Model)
+{
+    var audioId = "audio" + index;
+    if (isEven)
+    {
+        <section class="row customGreen d-flex flex-row mx-4 galleryBG irish py-4 px-3 my-3">
+            <div class="col-12 col-lg-5 d-flex flex-column">
+                <img class="soundIcon align-self-start mb-3 ms-2" src="~/Content/Icons/volume.png" onclick="document.getElementById('@audioId').play();" />
+                <audio id="@audioId">
+                    <source src="@Url.Content(aquaticAnimal.SoundFilePath)" type="audio/mpeg" />
+                </audio>
+                <img class="rounded-4" src="@Url.Content(aquaticAnimal.ImageFilePath)" alt="@aquaticAnimal.Name" />
+                <p class="text-center mt-3 fs-3 fw-semibold m-0 pb-0">@aquaticAnimal.Name</p>
+            </div>
+            <div class="col-12 col-lg-7 align-content-center">
+                <p class="fs-4 w-100 px-5 mt-5 mt-lg-0">"@aquaticAnimal.Introduction()"</p>
+                <p class="fs-4 w-100 px-5 mt-5">
+                    <span class="fw-bold">Description:</span> @aquaticAnimal.Description()
+                </p>
+            </div>
+        </section>
+    }
+    else
+    {
+        <section class="row customGreen d-flex flex-column-reverse flex-lg-row mx-4 galleryBG irish py-4 px-3 my-3">
+            <div class="col-12 col-lg-7 align-content-center">
+                <p class="fs-4 w-100 px-5 mt-5 mt-lg-0">"@aquaticAnimal.Introduction()"</p>
+                <p class="fs-4 w-100 px-5 mt-5">
+                    <span class="fw-bold">Description:</span> @aquaticAnimal.Description()
+                </p>
+            </div>
+            <div class="col-12 col-lg-5 d-flex flex-column">
+                <img class="soundIcon align-self-lg-end mb-3 ms-2 ms-0 me-lg-2" src="~/Content/Icons/volume.png" onclick="document.getElementById('@audioId').play();" />
+                <audio id="@audioId">
+                    <source src="@Url.Content(aquaticAnimal.SoundFilePath)" type="audio/mpeg" />
+                </audio>
+                <img class="rounded-4" src="@Url.Content(aquaticAnimal.ImageFilePath)" alt="@aquaticAnimal.Name" />
+                <p class="text-center mt-3 fs-3 fw-semibold m-0 pb-0">@aquaticAnimal.Name</p>
+            </div>
+        </section>
+    }
+    isEven = !isEven;
+    index++;
+}
+

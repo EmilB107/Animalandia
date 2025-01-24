@@ -224,6 +224,7 @@
     <Content Include="Content\Icons\volume.png" />
     <Content Include="Content\Images\Gallery\Aquatic Animals.png" />
     <Content Include="Content\Images\Gallery\Birds.png" />
+    <Content Include="Content\Images\Gallery\Farm Animals.png" />
     <Content Include="Content\Images\Gallery\Insects.png" />
     <Content Include="Content\Images\Gallery\Pets.png" />
     <Content Include="Content\Images\Gallery\Wild Animals.png" />
@@ -231,6 +232,12 @@
     <Content Include="Content\Images\placeholder.png" />
     <Content Include="Content\Images\placeholder2.png" />
     <Content Include="Content\Images\placeholder3.png" />
+    <Content Include="Content\Images\Gallery\W_BG\Aquatic Animals.png" />
+    <Content Include="Content\Images\Gallery\W_BG\Birds.png" />
+    <Content Include="Content\Images\Gallery\W_BG\Farm Animals.png" />
+    <Content Include="Content\Images\Gallery\W_BG\Insects.png" />
+    <Content Include="Content\Images\Gallery\W_BG\Pets.png" />
+    <Content Include="Content\Images\Gallery\W_BG\Wild Animals.png" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
@@ -240,7 +247,7 @@
     <Content Include="Scripts\bootstrap.esm.min.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
-    <Content Include="Content\IrishGrover.ttf" />
+    <Content Include="Content\Fonts\IrishGrover.ttf" />
     <None Include="Scripts\jquery-3.7.0.intellisense.js" />
     <Content Include="Scripts\jquery-3.7.0.js" />
     <Content Include="Scripts\jquery-3.7.0.min.js" />

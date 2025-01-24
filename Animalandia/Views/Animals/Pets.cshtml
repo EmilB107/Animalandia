@@ -15,7 +15,7 @@
     var audioId = "audio" + index;
     if (isEven)
     {
-        <section class="row customGreen d-flex flex-row mx-4 galleryBG py-4 px-3 my-3">
+        <section class="row customGreen d-flex flex-row mx-4 galleryBG irish py-4 px-3 my-3">
             <div class="col-12 col-lg-5 d-flex flex-column">
                 <img class="soundIcon align-self-start mb-3 ms-2" src="~/Content/Icons/volume.png" onclick="document.getElementById('@audioId').play();" />
                 <audio id="@audioId">
@@ -27,18 +27,18 @@
             <div class="col-12 col-lg-7 align-content-center">
                 <p class="fs-4 w-100 px-5 mt-5 mt-lg-0">"@pet.Introduction()"</p>
                 <p class="fs-4 w-100 px-5 mt-5">
-                    <span class="fw-bold">Description:</span> @pet.Description()
+                    <span class="fw-bold">Description:</span><br />@pet.Description()
                 </p>
             </div>
         </section>
     }
     else
     {
-        <section class="row customGreen d-flex flex-column-reverse flex-lg-row mx-4 galleryBG py-4 px-3 my-3">
+        <section class="row customGreen d-flex flex-column-reverse flex-lg-row mx-4 galleryBG irish py-4 px-3 my-3">
             <div class="col-12 col-lg-7 align-content-center">
                 <p class="fs-4 w-100 px-5 mt-5 mt-lg-0">"@pet.Introduction()"</p>
                 <p class="fs-4 w-100 px-5 mt-5">
-                    <span class="fw-bold">Description:</span> @pet.Description()
+                    <span class="fw-bold">Description:</span><br />@pet.Description()
                 </p>
             </div>
             <div class="col-12 col-lg-5 d-flex flex-column">
