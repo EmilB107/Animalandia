@@ -24,7 +24,7 @@ namespace Animalandia.Models
         {
             Name = "Dolphin 🐬";
             SoundFilePath = "~/Content/Animal sounds/Aquatic/Dolphin.mp3";
-            ImageFilePath = "~/Content/Images/placeholder2.png";
+            ImageFilePath = "~/Content/Images/Animals/Aquatic/Dolphin.png";
         }
 
         public override string Introduction()
@@ -44,7 +44,7 @@ namespace Animalandia.Models
         {
             Name = "Shark 🦈";
             SoundFilePath = "~/Content/Animal sounds/Aquatic/Shark (2).mp3";
-            ImageFilePath = "~/Content/Images/placeholder2.png";
+            ImageFilePath = "~/Content/Images/Animals/Aquatic/Shark.png";
         }
 
         public override string Introduction()
@@ -64,7 +64,8 @@ namespace Animalandia.Models
         {
             Name = "Octopus 🐙";
             SoundFilePath = "~/Content/Animal sounds/Aquatic/Shark (2).mp3";
-            ImageFilePath = "~/Content/Images/placeholder2.png";
+            ImageFilePath = "~/Content/Images/Animals/Aquatic/" +
+                "Octopus.png";
         }
 
         public override string Introduction()
