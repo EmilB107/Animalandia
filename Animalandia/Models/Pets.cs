@@ -24,7 +24,7 @@ namespace Animalandia.Models
         {
             Name = "Dog 🐕";
             SoundFilePath = "~/Content/Animal sounds/Pets/Dog.mp3";
-            ImageFilePath = "~/Content/Images/placeholder2.png";
+            ImageFilePath = "~/Content/Images/Animals/Pets/Dog.png";
         }
 
         public override string Introduction()
@@ -44,7 +44,7 @@ namespace Animalandia.Models
         {
             Name = "Cat 🐈";
             SoundFilePath = "~/Content/Animal sounds/Pets/Cat.mp3";
-            ImageFilePath = "~/Content/Images/placeholder2.png";
+            ImageFilePath = "~/Content/Images/Animals/Pets/Cat.png";
         }
 
         public override string Introduction()
@@ -64,7 +64,7 @@ namespace Animalandia.Models
         {
             Name = "Rabbit 🐇";
             SoundFilePath = "~/Content/Animal sounds/Pets/Rabbit.mp3";
-            ImageFilePath = "~/Content/Images/placeholder2.png";
+            ImageFilePath = "~/Content/Images/Animals/Pets/Rabbit.png";
         }
 
         public override string Introduction()
@@ -84,7 +84,7 @@ namespace Animalandia.Models
         {
             Name = "Fish 🐟";
             SoundFilePath = "~/Content/Animal sounds/Pets/fish.mp3";
-            ImageFilePath = "~/Content/Images/placeholder2.png";
+            ImageFilePath = "~/Content/Images/Animals/Pets/Fish.png";
         }
 
         public override string Introduction()
