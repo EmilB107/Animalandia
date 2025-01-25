@@ -7,21 +7,13 @@
     font-family: 'irishgrover', cursive;
 }
 
-.soundIcon {
-    height: 3rem;
-    width: 3rem;
-    border-radius: 50%; /* Makes the icon circular */
-    cursor: pointer;
-    padding: 10px;
-    background-color: forestgreen;
+.galleryImage {
+    width: 70vw; /* Adjust the value as needed */
+    max-width: 100%; /* Ensure images don't exceed their container's width */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Optional: Add border radius for a rounded effect */
+    margin: 0 auto; /* Center the images within their container */
 }
-
-    .soundIcon:hover {
-        background-color: #335E2B;
-        /*    box-shadow: 0 2px 0px rgba(0, 0, 0, 0.1);
-    background-color: rgba(0, 0, 0, 0.1);*/
-    }
-
 
 .animalLink {
     color: white;
@@ -64,11 +56,10 @@
     background-color: #335E2B;
 }
 
-.galleryImages {
+/*.galleryImages {
     border: none;
     border-radius: 20px;
-    cursor: pointer;
-}
+}*/
 
 .exploreBtn {
     background-color: #335E2B; /* Custom green background */
@@ -105,4 +96,51 @@ input,
 select,
 textarea {
     max-width: 280px;
+}
+
+@media (max-width: 991px) {
+    .galleryFS {
+        font-size: 5vw;
+    }
+
+    .galleryT {
+        font-size: 7vw;
+    }
+
+    .soundIcon {
+        width: 12vw;
+        height: auto;
+        border-radius: 50%; /* Makes the icon circular */
+        cursor: pointer;
+        padding: 10px;
+        background-color: forestgreen;
+    }
+
+    
+}
+
+@media (min-width: 992px) {
+    .galleryFS {
+        font-size: 1.4vw;
+    }
+
+    .galleryT {
+        font-size: 1.8vw;
+    }
+
+    .soundIcon {
+        width: 4vw;
+        height: auto;
+        border-radius: 50%; /* Makes the icon circular */
+        cursor: pointer;
+        padding: 10px;
+        background-color: forestgreen;
+    }
+
+}
+
+.soundIcon:hover {
+    background-color: #335E2B;
+    /*    box-shadow: 0 2px 0px rgba(0, 0, 0, 0.1);
+    background-color: rgba(0, 0, 0, 0.1);*/
 }
