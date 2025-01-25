@@ -11,18 +11,21 @@ namespace Animalandia.Controllers
         public ActionResult Index()
         {
             ViewBag.ActivePage = "Home";
+            ViewBag.FooterClass = "fixed-bottom";
             return View();
         }
 
         public ActionResult Gallery()
         {
             ViewBag.ActivePage = "Gallery";
+            ViewBag.FooterClass = ""; // No additional class for Gallery
             return View();
         }
 
         public ActionResult AboutUs()
         {
             ViewBag.ActivePage = "AboutUs";
+            ViewBag.FooterClass = ""; // No additional class for About Us
             return View();
         }
     }
