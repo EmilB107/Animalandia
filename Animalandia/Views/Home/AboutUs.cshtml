@@ -3,68 +3,63 @@
     ViewBag.Title = "Abous Us";
 }
 
+<main class="container-xl body-content" aria-labelledby="title">
+    <section class="row irish customGreen mt-5 mb-5">
+        <div class="col-12 text-center">
+            <p class="fs-2 m-0 p-0">About Us</p>
+            <p class="fw-semibold" style="font-size: 4rem;">Animalandia</p>
+        </div>
+        <div class="col-12">
+            <img class="img-fluid rounded-4" src="~/Content/Images/AboutUs/Header.png" />
+            <p class="fs-4 mt-4 px-2 px-lg-4">
+                Welcome to The Animal Sound Game, a fun, interactive, and educational application created by the talented students of BSCS 3-1N.
+                Our mission is to provide an enjoyable learning experience for kids, introducing them to the fascinating world of animals and their unique sounds.
+            </p>
+            <p class="fs-4 mt-3 px-2 px-lg-4">
+                Animalandia is designed especially for young learners, combining fun and education to make discovering animals exciting and engaging.
+            </p>
+        </div>
+    </section>
 
-<section class="row irish customGreen text-center mt-5 mb-5">
-    <div class="col-12">
-        <p class="fs-2 m-0 p-0">About Us</p>
-        <p class="fw-semibold" style="font-size: 4rem;">Animalandia</p>
-    </div>
-    <div class="col-12">
-        <img class="img-fluid rounded-4" src="~/Content/Images/placeholder3.png" />
-        <p class="fs-4 mt-3 px-4">
-            The Animal Sound Game is an interactive and educational application designed by BSCS 3-1N students for kids to learn about animals and their unique sounds.
-        </p>
-    </div>
-</section>
-
-<section class="row gx-5 justify-content-center irish customGreen text-center mb-4">
-    <p class="fs-3">Members</p>
-    <div class="col-6 col-lg-4 col-lg-3 mt-3">
-        <div class="card nav-item border-0">
-            <a href="@Url.Action("FarmAnimals", "Animals")">
-                <img class="img-fluid galleryImages" src="~/Content/Images/Gallery/W_BG/Farm Animals.png" />
-            </a>
-            <p class="text-center irish customGreen pt-2 fs-5 fw-semibold">Mem1</p>
+    <section class="row gx-5 justify-content-center irish customGreen text-center mb-4">
+        <p class="fs-3">Members</p>
+        <div class="col-6 col-lg-4 col-lg-3 mt-4">
+            <div class="card border-0">
+                <img class="img-fluid rounded-circle" src="~/Content/Images/AboutUs/De Villa.png" />
+                <p class="text-center irish customGreen pt-2 fs-5 fw-semibold">Franz Ivan De Villa</p>
+            </div>
         </div>
-    </div>
-    <div class="col-6 col-lg-4 col-lg-3 mt-3">
-        <div class="card nav-item border-0">
-            <a href="@Url.Action("WildAnimals", "Animals")">
-                <img class="img-fluid galleryImages" src="~/Content/Images/Gallery/W_BG/Wild Animals.png" />
-            </a>
-            <p class="text-center irish customGreen pt-2 fs-5 fw-semibold">Mem2</p>
+        <div class="col-6 col-lg-4 col-lg-3 mt-4">
+            <div class="card border-0">
+                <img class="img-fluid rounded-circle" src="~/Content/Images/AboutUs/Malasa.png" />
+                <p class="text-center irish customGreen pt-2 fs-5 fw-semibold">Ashley Jewel Heart Malasa</p>
+            </div>
         </div>
-    </div>
-    <div class="col-6 col-lg-4 col-lg-3 mt-3">
-        <div class="card nav-item border-0">
-            <a href="@Url.Action("Pets", "Animals")">
-                <img class="img-fluid galleryImages" src="~/Content/Images/Gallery/W_BG/Pets.png" />
-            </a>
-            <p class="text-center irish customGreen pt-2 fs-5 fw-semibold">Mem3</p>
+        <div class="col-6 col-lg-4 col-lg-3 mt-4">
+            <div class="card border-0">
+                <img class="img-fluid rounded-circle" src="~/Content/Images/AboutUs/Emil.png" />
+                <p class="text-center irish customGreen pt-2 fs-5 fw-semibold">John Emil Bragais</p>
+            </div>
         </div>
-    </div>
-    <div class="col-6 col-lg-4 col-lg-3 mt-3">
-        <div class="card nav-item border-0">
-            <a href="@Url.Action("AquaticAnimals", "Animals")">
-                <img class="img-fluid galleryImages" src="~/Content/Images/Gallery/W_BG/Aquatic Animals.png" />
-            </a>
-            <p class="text-center irish customGreen pt-2 fs-5 fw-semibold">Mem4</p>
+        <div class="col-6 col-lg-4 col-lg-3 mt-4">
+            <div class="card border-0">
+                <img class="img-fluid rounded-circle" src="~/Content/Images/AboutUs/Tan.png" />
+                <p class="text-center irish customGreen pt-2 fs-5 fw-semibold">Julian Justin Tan</p>
+            </div>
         </div>
-    </div>
-    <div class="col-6 col-lg-4 col-lg-3 mt-3">
-        <div class="card nav-item border-0">
-            <a href="@Url.Action("Birds", "Animals")">
-                <img class="img-fluid galleryImages" src="~/Content/Images/Gallery/W_BG/Birds.png" />
-            </a>
-            <p class="text-center irish customGreen pt-2 fs-5 fw-semibold">Mem5</p>
+        <div class="col-6 col-lg-4 col-lg-3 mt-4">
+            <div class="card border-0">
+                @*<img class="img-fluid rounded-circle" src="~/Content/Images/AboutUs/Birds.png" />*@
+                <img class="img-fluid rounded-circle" src="~/Content/Images/Gallery/W_BG/Birds.png" />
+                <p class="text-center irish customGreen pt-2 fs-5 fw-semibold">Rainiel Josh Ladiao</p>
+            </div>
         </div>
-    </div>
-    <div class="col-6 col-lg-4 col-lg-3 mt-3">
-        <div class="card nav-item border-0">
-            <a href="@Url.Action("Insects", "Animals")">
-                <img class="img-fluid galleryImages" src="~/Content/Images/Gallery/W_BG/Insects.png" />
-            </a>
-            <p class="text-center irish customGreen pt-2 fs-5 fw-semibold">Mem6</p>
+        <div class="col-6 col-lg-4 col-lg-3 mt-4">
+            <div class="card border-0">
+                @*<img class="img-fluid rounded-circle" src="~/Content/Images/AboutUs/Insects.png" />*@
+                <img class="img-fluid rounded-circle" src="~/Content/Images/Gallery/W_BG/Insects.png" />
+                <p class="text-center irish customGreen pt-2 fs-5 fw-semibold">Salvador Bibat Jr.</p>
+            </div>
         </div>
-    </div>
-</section>
+    </section>
+</main>
