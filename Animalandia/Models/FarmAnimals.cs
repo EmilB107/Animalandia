@@ -57,7 +57,10 @@ namespace Animalandia.Models
 
         public override string Description()
         {
-            return "Pigs are pink or brown animals with flat noses and curly tails. They love to roll in mud!";
+            return "Pigs are smart, playful animals with pink, brown, or black skin that can sometimes look a little wrinkly. " +
+                "They have short legs, curly tails, and flat noses that they use to dig in the soil for food. " +
+                "Pigs enjoy eating a variety of things, including vegetables, grains, and fruits. " +
+                "They love to roll in mud to stay cool and protect their skin from the sun. Pigs are curious and can learn tricks, just like dogs.";
         }
     }
 
@@ -77,7 +80,9 @@ namespace Animalandia.Models
 
         public override string Description()
         {
-            return "Chickens are small birds with feathers that can be white, brown, or black. They lay eggs!";
+            return "Chickens are small to medium-sized birds that come in a variety of feather colors, including white, brown, black, and even speckled patterns. " +
+                "They have sharp beaks, strong legs, and fluffy feathers that keep them warm. Hens, the female chickens, lay eggs almost every day, which people love to eat. " +
+                "Chickens are known for their clucking sounds and are often found scratching the ground for seeds and insects.";
         }
     }
 
@@ -97,7 +102,9 @@ namespace Animalandia.Models
 
         public override string Description()
         {
-            return "Sheep have fluffy white or gray wool and say 'baa.' Their wool is used to make clothes.";
+            return "Sheep are soft, woolly animals that are usually white, gray, or black. They have a round body covered in thick wool that farmers shear to make clothes like sweaters and scarves. " +
+                "Sheep are gentle and love to graze on grass in fields. They often stay together in groups called flocks. " +
+                "Their \"baa\" sound is easily recognizable, and they are known for being calm and peaceful animals.";
         }
     }
 }
