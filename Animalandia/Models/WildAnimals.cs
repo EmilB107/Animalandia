@@ -34,7 +34,11 @@ namespace Animalandia.Models
 
         public override string Description()
         {
-            return "Lions are big cats with golden fur and loud roars. Male lions have fluffy manes.";
+            return "Lions are powerful and majestic big cats often called the \"king of the jungle.\" " +
+                "They have golden fur, and male lions are easily recognized by their thick, fluffy manes. " +
+                "Lions live in groups called prides, which include females and their cubs. " +
+                "These animals are strong hunters and eat meat, usually catching animals like zebras or antelopes. " +
+                "Their loud roar can be heard from miles away and is used to communicate with other lions.";
         }
     }
 
@@ -54,7 +58,10 @@ namespace Animalandia.Models
 
         public override string Description()
         {
-            return "Elephants are huge animals with gray skin, long trunks, and big ears.";
+            return "Elephants are the largest land animals in the world, with thick gray skin, big ears, and long trunks. " +
+                "They use their trunks for many things, like picking up food, drinking water, and even greeting other elephants. " +
+                "Elephants have large tusks made of ivory and are known for their intelligence and strong family bonds. " +
+                "They eat lots of plants, including grass, leaves, and fruit, and need plenty of water to stay hydrated.";
         }
     }
 
@@ -74,7 +81,9 @@ namespace Animalandia.Models
 
         public override string Description()
         {
-            return "Giraffes are tall animals with long necks and brown spots. They eat leaves from tall trees.";
+            return "Giraffes are the tallest animals on Earth, with long necks and legs that help them reach leaves high up in trees. " +
+                "They have yellowish fur covered in unique brown spots, and no two giraffes have the same pattern. " +
+                "Giraffes use their long tongues to grab leaves and twigs to eat. They live in savannas and open woodlands and can run surprisingly fast despite their size.";
         }
     }
 
@@ -94,7 +103,10 @@ namespace Animalandia.Models
 
         public override string Description()
         {
-            return "Zebras look like striped horses with black and white fur. They live in grassy areas.";
+            return "Zebras are horse-like animals with beautiful black-and-white stripes that make them stand out. " +
+                "Each zebra has a unique stripe pattern, like a fingerprint. Zebras live in grassy areas and travel in herds to stay safe. " +
+                "They eat grass and other plants and are always on the lookout for predators like lions. " +
+                "Zebras are known for their loud braying sound, similar to a donkey’s.";
         }
     }
 }
