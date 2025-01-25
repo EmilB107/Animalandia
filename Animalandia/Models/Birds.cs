@@ -34,7 +34,9 @@ namespace Animalandia.Models
 
         public override string Description()
         {
-            return "Parrots are colorful birds that can talk! They often have green, red, or blue feathers.";
+            return "Parrots are colorful birds that often have green, red, blue, or yellow feathers. They are known for their ability to mimic sounds and even talk. " +
+                "Parrots have strong, curved beaks for cracking nuts and seeds. They are social birds that love to interact with people and other parrots. " +
+                "Parrots are often found in tropical forests.";
         }
     }
 
@@ -54,7 +56,10 @@ namespace Animalandia.Models
 
         public override string Description()
         {
-            return "Eagles are large, powerful birds with brown and white feathers. They fly very high.";
+            return "Eagles are large, powerful birds with sharp talons and excellent eyesight. " +
+                "They have brown feathers with white on their heads and tails, depending on the species. " +
+                "Eagles are skilled hunters, catching fish and small animals with their strong claws. " +
+                "They build large nests in high places and are symbols of strength and freedom.";
         }
     }
 
@@ -74,7 +79,9 @@ namespace Animalandia.Models
 
         public override string Description()
         {
-            return "Owls are nighttime birds with big eyes and soft feathers. They hoot 'whoo-whoo!'";
+            return "Owls are mysterious, nocturnal birds with large, round eyes that can see in the dark. " +
+                "They have soft feathers that help them fly silently. Owls come in many sizes and colors, but most are brown, gray, or white. " +
+                "They are excellent hunters and eat small animals like mice and insects. Owls make a \"hoo-hoo\" sound, especially at night.";
         }
     }
 
@@ -94,7 +101,10 @@ namespace Animalandia.Models
 
         public override string Description()
         {
-            return "Penguins are black and white birds that waddle and swim. They live in cold places.";
+            return "Penguins are black-and-white birds that cannot fly but are amazing swimmers. " +
+                "They live in cold regions like Antarctica and waddle on land with their short legs. " +
+                "Penguins eat fish and krill and use their strong wings, called flippers, to dive into icy waters. " +
+                "They are social animals that live in large groups for warmth and protection.";
         }
     }
 }
