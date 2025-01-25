@@ -3,9 +3,9 @@
     ViewBag.Title = "Home Page";
 }
 
-<main>
+<main class="container-xl body-content" aria-labelledby="title">
     <section class="row justify-content-center my-5 pb-5" aria-labelledby="aspnetTitle">
-        <div class="col-6 text-center mt-5">
+        <div class="col-12 col-md-8 col-lg-6 text-center mt-5">
             <img class="img-fluid my-3" src="~/Content/Images/header.png" alt="Header Image" />
             @Html.ActionLink("Explore", "Gallery", "Home", new { area = "" }, new { @class = "btn exploreBtn fs-4 mt-5" })
         </div>
