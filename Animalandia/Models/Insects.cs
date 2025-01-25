@@ -34,7 +34,10 @@ namespace Animalandia.Models
 
         public override string Description()
         {
-            return "Butterflies are small insects with colorful wings. They flutter from flower to flower.";
+            return "Butterflies are delicate insects with colorful, patterned wings. " +
+                "They start life as caterpillars before transforming into butterflies through a process called metamorphosis. " +
+                "Butterflies love to sip nectar from flowers and are important pollinators. " +
+                "They are found in gardens, forests, and fields and come in many beautiful colors and shapes.";
         }
     }
 
@@ -54,7 +57,9 @@ namespace Animalandia.Models
 
         public override string Description()
         {
-            return "Bees are yellow and black insects that make honey and buzz around flowers.";
+            return "Bees are small, hardworking insects with black-and-yellow stripes. They buzz from flower to flower, collecting nectar to make honey. " +
+                "Bees are very important for pollination, helping plants grow fruits and seeds. They live in colonies with a queen bee, worker bees, and drones. " +
+                "Bees communicate through special dances to share the location of flowers.";
         }
     }
 
@@ -74,7 +79,9 @@ namespace Animalandia.Models
 
         public override string Description()
         {
-            return "Ladybugs are tiny red insects with black spots. They're fun to spot in gardens!";
+            return "Ladybugs are tiny, round insects with shiny red or orange shells covered in black spots. " +
+                "They are often seen in gardens and are helpful because they eat pests like aphids. " +
+                "Ladybugs can also fly short distances and are a favorite insect of many kids because of their cute appearance.";
         }
     }
 
@@ -94,7 +101,10 @@ namespace Animalandia.Models
 
         public override string Description()
         {
-            return "Ants are small and hardworking insects that work together to build big nests.";
+            return "Ants are small insects that live and work in large groups called colonies. " +
+                "They can be black, red, or brown and are known for being very strong for their size. " +
+                "Ants build intricate underground homes and work together to find food and protect their queen. " +
+                "They communicate using chemicals called pheromones to guide each other.";
         }
     }
 }
