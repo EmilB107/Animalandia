@@ -15,30 +15,30 @@
     var audioId = "audio" + index;
     if (isEven)
     {
-        <section class="row customGreen d-flex flex-row mx-4 galleryBG irish py-4 px-3 my-3">
+        <section class="row customGreen d-flex flex-column-reverse flex-lg-row galleryBG irish py-4 px-3 my-3 mx-2 mx-lg-4">
             <div class="col-12 col-lg-5 d-flex flex-column">
                 <img class="soundIcon align-self-start mb-3 ms-2" src="~/Content/Icons/volume.png" onclick="document.getElementById('@audioId').play();" />
                 <audio id="@audioId">
                     <source src="@Url.Content(insect.SoundFilePath)" type="audio/mpeg" />
                 </audio>
                 <img class="rounded-4" src="@Url.Content(insect.ImageFilePath)" alt="@insect.Name" />
-                <p class="text-center mt-3 fs-3 fw-semibold m-0 pb-0">@insect.Name</p>
+                <p class="galleryFS text-center fw-semibold m-0 pb-0 mt-3">@insect.Name</p>
             </div>
             <div class="col-12 col-lg-7 align-content-center">
-                <p class="fs-4 w-100 px-5 mt-5 mt-lg-0">"@insect.Introduction()"</p>
-                <p class="fs-4 w-100 px-5 mt-5">
-                    <span class="fw-bold">Description:</span> @insect.Description()
+                <p class="galleryFS text-center px-lg-5 mt-4 mt-lg-0">"@insect.Introduction()"</p>
+                <p class="galleryFS px-lg-5 mt-4">
+                    <span class="fw-bold">Description:</span><br />@insect.Description()
                 </p>
             </div>
         </section>
     }
     else
     {
-        <section class="row customGreen d-flex flex-column-reverse flex-lg-row mx-4 galleryBG irish py-4 px-3 my-3">
+        <section class="row customGreen d-flex flex-column-reverse flex-lg-row galleryBG irish py-4 px-3 my-3 mx-2 mx-lg-4">
             <div class="col-12 col-lg-7 align-content-center">
-                <p class="fs-4 w-100 px-5 mt-5 mt-lg-0">"@insect.Introduction()"</p>
-                <p class="fs-4 w-100 px-5 mt-5">
-                    <span class="fw-bold">Description:</span> @insect.Description()
+                <p class="galleryFS text-center px-lg-5 mt-4 mt-lg-0">"@insect.Introduction()"</p>
+                <p class="galleryFS px-lg-5 mt-4">
+                    <span class="fw-bold">Description:</span><br />@insect.Description()
                 </p>
             </div>
             <div class="col-12 col-lg-5 d-flex flex-column">
@@ -47,7 +47,7 @@
                     <source src="@Url.Content(insect.SoundFilePath)" type="audio/mpeg" />
                 </audio>
                 <img class="rounded-4" src="@Url.Content(insect.ImageFilePath)" alt="@insect.Name" />
-                <p class="text-center mt-3 fs-3 fw-semibold m-0 pb-0">@insect.Name</p>
+                <p class="galleryFS text-center fw-semibold m-0 pb-0 mt-3">@insect.Name</p>
             </div>
         </section>
     }

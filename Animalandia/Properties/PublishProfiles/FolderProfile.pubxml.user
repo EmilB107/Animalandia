@@ -5,15 +5,15 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
 <Project>
   <PropertyGroup>
     <_PublishTargetUrl>C:\JEB\Programming\C#\project</_PublishTargetUrl>
-    <History>False|2025-01-24T03:18:55.9695129Z||;False|2025-01-24T11:15:46.4403646+08:00||;</History>
+    <History>True|2025-01-25T06:02:59.1878493Z||;True|2025-01-25T11:39:34.9297848+08:00||;False|2025-01-24T11:18:55.9695129+08:00||;False|2025-01-24T11:15:46.4403646+08:00||;</History>
     <LastFailureDetails />
   </PropertyGroup>
   <ItemGroup>
     <File Include="bin/Animalandia.dll">
-      <publishTime>01/24/2025 13:24:35</publishTime>
+      <publishTime>01/25/2025 14:02:57</publishTime>
     </File>
     <File Include="bin/Animalandia.pdb">
-      <publishTime>01/24/2025 13:24:35</publishTime>
+      <publishTime>01/25/2025 14:02:57</publishTime>
     </File>
     <File Include="bin/Antlr3.Runtime.dll">
       <publishTime>09/10/2013 16:29:20</publishTime>
@@ -372,6 +372,21 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
     <File Include="Content/Icons/volume.png">
       <publishTime>01/22/2025 11:22:43</publishTime>
     </File>
+    <File Include="Content/Images/AboutUs/De Villa.png">
+      <publishTime>01/25/2025 11:02:40</publishTime>
+    </File>
+    <File Include="Content/Images/AboutUs/Emil.png">
+      <publishTime>01/25/2025 11:04:15</publishTime>
+    </File>
+    <File Include="Content/Images/AboutUs/Header.png">
+      <publishTime>01/25/2025 10:43:07</publishTime>
+    </File>
+    <File Include="Content/Images/AboutUs/Malasa.png">
+      <publishTime>01/25/2025 11:02:40</publishTime>
+    </File>
+    <File Include="Content/Images/AboutUs/Tan.png">
+      <publishTime>01/25/2025 11:02:40</publishTime>
+    </File>
     <File Include="Content/Images/Animals/Ant.png">
       <publishTime>01/24/2025 09:25:59</publishTime>
     </File>
@@ -565,7 +580,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>01/24/2025 11:21:06</publishTime>
     </File>
     <File Include="Content/Site.css">
-      <publishTime>01/24/2025 13:23:56</publishTime>
+      <publishTime>01/25/2025 14:00:31</publishTime>
     </File>
     <File Include="favicon.ico">
       <publishTime>01/20/2025 00:50:19</publishTime>
@@ -643,43 +658,43 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>01/20/2025 00:50:45</publishTime>
     </File>
     <File Include="Views/Animals/AquaticAnimals.cshtml">
-      <publishTime>01/24/2025 10:45:20</publishTime>
+      <publishTime>01/25/2025 14:02:28</publishTime>
     </File>
     <File Include="Views/Animals/Birds.cshtml">
-      <publishTime>01/24/2025 10:45:39</publishTime>
+      <publishTime>01/25/2025 13:47:01</publishTime>
     </File>
     <File Include="Views/Animals/FarmAnimals.cshtml">
-      <publishTime>01/24/2025 10:45:36</publishTime>
+      <publishTime>01/25/2025 14:02:28</publishTime>
     </File>
     <File Include="Views/Animals/Insects.cshtml">
-      <publishTime>01/24/2025 10:45:32</publishTime>
+      <publishTime>01/25/2025 13:42:05</publishTime>
     </File>
     <File Include="Views/Animals/Pets.cshtml">
-      <publishTime>01/24/2025 10:45:29</publishTime>
+      <publishTime>01/25/2025 13:51:55</publishTime>
     </File>
     <File Include="Views/Animals/WildAnimals.cshtml">
-      <publishTime>01/24/2025 10:45:25</publishTime>
+      <publishTime>01/25/2025 13:53:00</publishTime>
     </File>
     <File Include="Views/Home/AboutUs.cshtml">
-      <publishTime>01/24/2025 09:56:49</publishTime>
+      <publishTime>01/25/2025 12:16:02</publishTime>
     </File>
     <File Include="Views/Home/FarmAnimals.cshtml">
       <publishTime>01/20/2025 09:55:45</publishTime>
     </File>
     <File Include="Views/Home/Gallery.cshtml">
-      <publishTime>01/24/2025 13:07:33</publishTime>
+      <publishTime>01/25/2025 13:11:22</publishTime>
     </File>
     <File Include="Views/Home/Index.cshtml">
-      <publishTime>01/24/2025 10:12:20</publishTime>
+      <publishTime>01/25/2025 12:18:06</publishTime>
     </File>
     <File Include="Views/Shared/Error.cshtml">
       <publishTime>01/20/2025 00:50:19</publishTime>
     </File>
     <File Include="Views/Shared/_AnimalsLayout.cshtml">
-      <publishTime>01/23/2025 21:21:31</publishTime>
+      <publishTime>01/25/2025 13:31:08</publishTime>
     </File>
     <File Include="Views/Shared/_Layout.cshtml">
-      <publishTime>01/21/2025 22:03:49</publishTime>
+      <publishTime>01/25/2025 13:13:33</publishTime>
     </File>
     <File Include="Views/Web.config">
       <publishTime>01/24/2025 13:02:01</publishTime>
