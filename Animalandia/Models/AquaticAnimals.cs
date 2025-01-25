@@ -34,7 +34,9 @@ namespace Animalandia.Models
 
         public override string Description()
         {
-            return "Dolphins are friendly, gray animals that swim fast and love to jump out of water.";
+            return "Dolphins are playful and intelligent marine animals that live in oceans. They have smooth, gray skin and a curved dorsal fin on their backs. " +
+                "Dolphins are fast swimmers and often leap out of the water. They eat fish and squid and use a special clicking sound called echolocation to find their food. " +
+                "Dolphins are social animals and live in groups called pods.";
         }
     }
 
@@ -54,7 +56,9 @@ namespace Animalandia.Models
 
         public override string Description()
         {
-            return "Sharks are big fish with sharp teeth. They can be gray, blue, or even white.";
+            return "Sharks are large, strong fish with sharp teeth and a sleek body built for swimming fast. They can be gray, blue, or even white, depending on the species. " +
+                "Sharks are excellent hunters and have a great sense of smell to find their prey. Despite their fearsome reputation, most sharks are not dangerous to humans. " +
+                "They play an important role in the ocean’s ecosystem.";
         }
     }
 
@@ -75,7 +79,9 @@ namespace Animalandia.Models
 
         public override string Description()
         {
-            return "Octopuses have soft, round bodies and eight arms. They can change color to hide.";
+            return "Octopuses are fascinating sea creatures with soft, round bodies and eight long arms covered in suckers. " +
+                "They can change their skin color and texture to blend in with their surroundings. Octopuses are very smart and can solve puzzles to find food. " +
+                "They live in oceans and eat crabs, shrimp, and fish. When threatened, they can squirt ink to escape from predators.";
         }
     }
 }
