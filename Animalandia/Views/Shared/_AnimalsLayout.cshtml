@@ -10,25 +10,25 @@
 <body>
     <div class="container-fluid">
         <div class="row">
-            <aside class="col-lg-3 col-xxl-2 navbar navbar-expand-lg customGreenBG d-lg-flex flex-lg-column pe-5 ps-4">
+            <aside class="col-lg-3 col-xxl-2 navbar navbar-expand-lg customGreenBG d-lg-flex flex-lg-column px-4">
                 <button class="navbar-toggler" type="button" data-bs-scroll="true" data-bs-backdrop="false" data-bs-toggle="offcanvas"
                         data-bs-target="#offcanvasLeft" aria-controls="offcanvasLeft" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                @Html.ActionLink("Animalandia", "Index", "Home", new { area = "" }, new { @class = "navbar-brand text-white fs-2 irish text-center my-3 d-lg-none" })
+                @Html.ActionLink("Animalandia", "Index", "Home", new { area = "" }, new { @class = "navbar-brand text-white fs-2 irish d-lg-none" })
                 <button class="navbar-toggler" type="button" data-bs-scroll="true" data-bs-backdrop="false" data-bs-toggle="offcanvas"
                         data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
-                <div class="offcanvas-lg offcanvas-start vh-100 customGreenBG" tabindex="-1" id="offcanvasLeft" aria-labelledby="offcanvasLeftLabel">
+                <div class="offcanvas-lg offcanvas-start customGreenBG" tabindex="-1" id="offcanvasLeft" aria-labelledby="offcanvasLeftLabel">
                     <div class="offcanvas-header px-4 pb-0">
                         <h5 class="offcanvas-title text-white fs-4" id="offcanvasLeftLabel">Animalandia</h5>
                         <button type="button" class="btn-close btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close" data-bs-target="#offcanvasLeft"></button>
                     </div>
                     <div class="offcanvas-body justify-content-start irish">
                         <ul class="navbar-nav navbar-expand-lg flex-column">
-                            @Html.ActionLink("Animalandia", "Index", "Home", new { area = "" }, new { @class = "navbar-brand text-white fs-2 mt-3 mb-4 d-none d-lg-block ms-5" })
+                            @Html.ActionLink("Animalandia", "Index", "Home", new { area = "" }, new { @class = "navbar-brand text-white fs-2 mt-3 mb-4 d-none d-lg-block ms-lg-5" })
                             <p class="fs-6 text-white-50 ps-lg-3 mt-4 mt-lg-0">Categories</p>
                             <li class="nav-item">
                                 @Html.ActionLink("Farm Animals", "FarmAnimals", "Animals", new { @class = "nav-link animalLink my-1 ps-lg-4" + (ViewBag.ActivePage == "FarmAnimals" ? " active" : "") })
@@ -78,7 +78,7 @@
         </div>
     </div>
     <footer class="container-fluid customGreenBG d-flex justify-content-center" style="height: 5rem">
-        <p class="irish text-white align-content-center pt-3 mt-3">&copy; @DateTime.Now.Year - Animalandia — ASP.NET Application</p>
+        <p class="irish text-white align-content-center mt-4">&copy; @DateTime.Now.Year - Animalandia — ASP.NET Application</p>
     </footer>
 
     @Scripts.Render("~/bundles/jquery")
