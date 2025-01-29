@@ -135,9 +135,11 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\Images\AboutUs\Bibat.png" />
     <Content Include="Content\Images\AboutUs\De Villa.png" />
     <Content Include="Content\Images\AboutUs\Emil.png" />
     <Content Include="Content\Images\AboutUs\Header.png" />
+    <Content Include="Content\Images\AboutUs\Ladiao.png" />
     <Content Include="Content\Images\AboutUs\Malasa.png" />
     <Content Include="Content\Images\AboutUs\Tan.png" />
     <Content Include="Content\Images\Animals\Ant.png" />
