@@ -1,2 +1,21 @@
+# Visual Studio
 .vs/
-```[_{{{CITATION{{{_1{Ignoring files - GitHub Docs](https://docs.github.com/en/get-started/getting-started-with-git/ignoring-files)
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Build output
+[Bb]in/
+[Oo]bj/
+
+# NuGet packages (restore via NuGet Package Restore)
+packages/
+*.nupkg
+
+# Publish output
+publish/
+PublishOutput/
+
+# Web publish
+*.pubxml.user
