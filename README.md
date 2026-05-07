@@ -30,22 +30,31 @@ For options 2 and 3 - download the repository as ZIP file
 3. Download as ZIP File
 4. Extract san niyo trip
 
-Option 2 - Vistual Studio
+Option 2 - Visual Studio
 1. Find and Select lang "Animalandia.sln" sa downloaded repo
 2. goods na yan
    
-Option 3 - Vistual Studio
+Option 3 - Visual Studio
 1. Go to the created project folder
 2. Copy lng laman nung nasa downloaded repo - Animalandia > Animalandia (or name nung Solution na nilagay sa settings) folder and paste sa created project
 3. goods na yan if goods steps
 
+NuGet Packages~
+Hindi na kasama sa repo yung packages folder (para hindi mabigat) - need lang i-restore.
+1. Open the solution (.sln) in Visual Studio
+2. Right-click the Solution in Solution Explorer
+3. Select "Restore NuGet Packages"
+4. Build the project
+
 ===========================================================================
 
-File Heirarchy nung sa Visual Studio (Solution Explover/View)
+File Heirarchy nung sa Visual Studio (Solution Explorer/View)
 ```
 └── Animalandia
     ├── Connected Services
     ├── Properties
+    │   └── PublishProfiles
+    │       └── FolderProfile.pubxml
     ├── References
     ├── App_Data
     ├── App_Start
@@ -53,19 +62,39 @@ File Heirarchy nung sa Visual Studio (Solution Explover/View)
     │   ├── FilterConfig.cs
     │   └── RouteConfig.cs
     ├── Content
-    │   ├── css/
-    │   │   └── styles.css
-    │   ├── images/
-    │   │   └── logo.png
-    │   └── fonts/
+    │   ├── Animal sounds
+    │   │   ├── Aquatic/
+    │   │   ├── Birds/
+    │   │   ├── Farm Animals/
+    │   │   ├── Insects/
+    │   │   ├── Pets/
+    │   │   └── Wild Animals/
+    │   ├── Fonts
+    │   │   └── IrishGrover.ttf
+    │   ├── Icons
+    │   │   └── volume.png
+    │   ├── Images
+    │   │   ├── AboutUs/
+    │   │   ├── Animals/
+    │   │   └── Gallery/
+    │   ├── bootstrap.css (+ variants)
+    │   └── Site.css
     ├── Controllers
     │   ├── GalleryController.cs
     │   └── HomeController.cs
     ├── Models
-    │   ├── AnimalModel.cs
-    │   └── GalleryModel.cs
+    │   ├── Animals.cs
+    │   ├── AquaticAnimals.cs
+    │   ├── Birds.cs
+    │   ├── FarmAnimals.cs
+    │   ├── Insects.cs
+    │   ├── Pets.cs
+    │   └── WildAnimals.cs
     ├── Scripts
-    │   └── main.js
+    │   ├── bootstrap.bundle.js (+ variants)
+    │   ├── jquery-3.7.0.js (+ variants)
+    │   ├── jquery.validate.js (+ variants)
+    │   └── modernizr-2.8.3.js
     ├── Views
     │   ├── Animals
     │   │   ├── AquaticAnimals.cshtml
@@ -76,14 +105,13 @@ File Heirarchy nung sa Visual Studio (Solution Explover/View)
     │   │   └── WildAnimals.cshtml
     │   ├── Home
     │   │   ├── AboutUs.cshtml
-    │   │   ├── FarmAnimals.cshtml
     │   │   ├── Gallery.cshtml
     │   │   └── Index.cshtml
     │   ├── Shared
     │   │   ├── _AnimalsLayout.cshtml
     │   │   ├── _Layout.cshtml
-    │   │   ├── Error.cshtml
-    │   │   └── _ViewStart.cshtml
+    │   │   └── Error.cshtml
+    │   └── _ViewStart.cshtml
     ├── favicon.ico
     ├── Global.asax
     ├── packages.config
@@ -102,13 +130,13 @@ Some Deets:
 ```
     ├── Content
 ```
-- stuffs like images, fonts, and css (both bootstrap framework and Site.css for customized styles) ay dito nakalagay.
+- stuffs like images, fonts, icons, animal sounds (mp3), and css (both bootstrap framework and Site.css for customized styles) ay dito nakalagay.
 
 ```
     ├── Scripts
 ```
 - as the name implies, scripts laman niya. wala ako masyado ginalaw, d nmn ako marunong mag js. pero kung bet niyo, pwede kayo mag-add.
-- just make sure na i-add niyo don sa BundleConfig.cs, under boostrap bundle, para masmadali ma-manage.
+- just make sure na i-add niyo don sa BundleConfig.cs, under bootstrap bundle, para masmadali ma-manage.
 
 ```
     ├── Controllers
@@ -116,6 +144,18 @@ Some Deets:
     │   └── HomeController.cs
 ```
 - dito mag-configure nung sa file paths. madali lang siya since yung project framework na mismo nagha-handle.
+
+```
+    ├── Models
+    │   ├── Animals.cs
+    │   ├── AquaticAnimals.cs
+    │   ├── Birds.cs
+    │   ├── FarmAnimals.cs
+    │   ├── Insects.cs
+    │   ├── Pets.cs
+    │   └── WildAnimals.cs
+```
+- dito nakalagay yung data/properties ng bawat animal category. Animals.cs yung base/parent class, tapos yung iba nag-eextend doon.
 
 ```
     ├── Views
@@ -133,7 +173,6 @@ Some Deets:
 ```
     │   ├── Home
     │   │   ├── AboutUs.cshtml
-    │   │   ├── FarmAnimals.cshtml
     │   │   ├── Gallery.cshtml
     │   │   └── Index.cshtml
 ```
@@ -150,6 +189,5 @@ Some Deets:
     ├── favicon.ico
 ```
 - icon nung website sa web, baka trip niyo palitan.
-
 
 
